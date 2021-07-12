@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>A380</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstra.css" rel="stylesheet">
+    <script src="dist/js/jquery-3.1.0.js"></script>
+  
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="dist/css/paperbs.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container-fluid containernav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">Cabin System and Devices</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="main.html">Home</a></li>
+            <li ><a href="ice.html" class="active"role="button">Inflight Entertainment</a>
+            <li class="active"><a href="A380.html" class="active"role="button">Airbus 380</a></li>
+            <li><a href="B777.html" class="active"role="button">Boeing 777</a></li>
+            <li><a href="mod.html" class="active"role="button">Meal Ordering Device</a></li>
+            <li><a href="videos.html" class="active"role="button">Job Accountabilities</a></li>
+            <li><a href="moodlighting.html" class="active"role="button">Mood Lighting</a></li>           
+           </ul>      
+         </div>
+      </div>    
+    </nav>
+
+    <div class="container">      
+      <div class="well well-lg" style="margin-top:20px">
+        <h1>A380</h1>         
+      </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4>Configuration</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+             <div class="panel-body">
+               <img src="dist/images/A380/configuration.jpg" class="img-reponsive"alt="configuration"/>
+            </div>
+          </div>    
+      </div>
+        <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingZero">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                <h4>Suites/Seat</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseZero" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingZero">
+             <div class="panel-body">               
+            <div class="row">
+               <div class="col-md-2">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                  <li role="presentation" class="active"><a id="a" href="#fcsuites" aria-controls="Wi-Fi" role="tab" data-toggle="tab">A380 FC Suites</a></li>
+                  <li role="presentation"><a id="b" href="#jcseat" aria-controls="jcseat" role="tab" data-toggle="tab">A380 JC Seat V2</a></li>
+                  <li role="presentation"><a id="c" href="#armrest1" aria-controls="armrest1" role="tab" data-toggle="tab">Armrest 1</a></li>
+                  <li role="presentation"><a id="d" href="#armrest2" aria-controls="armrest2" role="tab" data-toggle="tab">Armrest 2</a></li>
+                </ul>
+              </div>  
+               <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="fcsuites">
+          <div class="col-xs-12 col-sm-6 col-md-9">
+                      <video id="vid_frame1" width="auto" height="500" controls>
+                      <source src="dist/videos/Manual_Seat_Operation/A380_FC_Suite.mp4" type="video/mp4">                
+                      Your browser does not support the video tag.
+                      </video>
+              </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in" id="jcseat">
+         <div class="col-xs-12 col-sm-6 col-md-9">
+                      <video id="vid_frame2" width="auto" height="500" controls >
+                      <source src="dist/videos/Manual_Seat_Operation/A380_JC_Seat_V2.mp4" type="video/mp4">                
+                      Your browser does not support the video tag.
+                      </video>
+              </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in" id="armrest1">
+         <div class="col-xs-12 col-sm-6 col-md-9">
+                      <video id="vid_frame3" width="auto" height="500" controls muted >
+                      <source src="dist/videos/Manual_Seat_Operation/Armrest1.mp4" type="video/mp4">                
+                      Your browser does not support the video tag.
+                      </video>
+              </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in" id="armrest2">
+         <div class="col-xs-12 col-sm-6 col-md-9">
+                      <video id="vid_frame4" width="auto" height="500" controls muted >
+                      <source src="dist/videos/Manual_Seat_Operation/Armrest2.mp4" type="video/mp4">                
+                      Your browser does not support the video tag.
+                      </video>
+              </div>
+        </div>
+       </div>
+      </div>
+     </div>     
+          </div>
+        </div>
+      <div class="panel panel-info">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h4>Crew Work Station</h4>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <strong>Crew Work Station (CWS)</strong>
+            <p>It is a designated stowage location for a variety of inflight tools that all cabin crew may need to use at some stage during the flight.
+              <ul>
+                <li>A Crew Management Terminal (CMT) is located inside the CWS and thus, the inflight Entertainment System (IFE) is operated from this location.</li>
+                <li>It features an L shaped table and seat for in flight administration duties</li>
+                <li>The external door and internal stowage are lockable, so it is an ideal location to stow flight documentation and precious cargo</li>
+              </ul>
+            </p>
+            <p>Guideline for the use of the CWS:
+              <ul>
+                <li>The CWS door should be locked by the handle and <b>NOT</b> by the key</li>
+                <li>The CWS is the dedicated precious cargo stowage</li>
+                <li>The CWS cannot be occupied during taxi, take-off and landing and in cases of turbulence when the captain requests cabin crew to take their jump seats (the seat is not certified for use during these times)</li>
+                <li>Take care when taking food and beverages into the CWS, to avoid damage to the electronic equipment</li>
+                <li>Purser to ensure periods of rest time are not spent in the CWS – it is not a rest area</li>
+                <li>Under no circumstances can the CWS be used to stow large baggage, baby strollers or musical instruments at any phase of the flight</li>
+                <li>No customers are allowed to enter the CWS</li>
+              </ul>
+            </p>
+            <p>CWS MAIN POWER
+              <ul>
+                <li>This switch controls the power to the CWS and all its components. It should always be ON unless there is an emergency.</li>                
+              </ul>
+            </p>
+            <p>PED OUTLET AND STOWAGE OUTLET UNIT
+              <ul>
+                <li>This switch controls the power provided by two external electrical outlets one of which is located in the CWS outer-side stowage area.</li> 
+              </ul>
+            </p>
+            <p>CWS OVERHEAD LIGHTING 
+              <ul>
+                <li>It is a lighting control switch with 3 settings: BRIGHT, DIM, and OFF.</li>               
+              </ul>
+            </p>
+            <p>RECHARGE OUTLET
+              <ul>
+                <li>A 110V, 60Hz charging outlet to be used with KIS devices, i.e. tablet and printer.</li>               
+              </ul>
+            </p>
+             <p>STOWAGE OUTLET UNIT IN USE INDICATOR 
+              <ul>
+                <li>This is an indicator light which comes ON when the external stowage outlet in being used.</li>               
+              </ul>
+            </p>
+            <p>The CMT's main purpose is to run the IFE management software which allows the crew to control and check various IFE functions. On its right hand side, the CMT has a card reader which is used by the crew to sign in to the system by swiping their ID card. It is also used for reading Credit Card information.
+            </p>
+            <p>IFE Printer
+              <ul>
+                <li>The IFE Printer can be used to print various system related information. Currently, there is no requirement to use the IFE printer. Future systems such as electronic documentation and electronic logbook will allow the crew to print selected information. More details on how the printer is used will be added to this section as and when the requirement to use the printer arises.</li>
+              </ul>  
+            </p>
+            <p>DVD Player
+              <ul>
+                <li>The DVD Player has become a standard aircraft component used to play various cabin video PAs which might have not been loaded onto the IFE system and are available only on DVDs. Using the DVD Player is similar to using any consumer DVD player, and the buttons EJECT, PLAY, PAUSE, STOP, SKIP to next and SKIP to previous operates as expected. In addition there are the following light indicators.</li>
+                <li>DISC IN – will stay on as long as there is a disc in the player.</li>
+                <li>POWER – will stay on as long as there is power to the player.</li>
+                <li>ERROR DISC – will come on when the player encounters an error while reading the disc (wrong disc type or disc loaded upside down) .</li>
+                <li>EWCP – Early Window Content Protection – only when it is flashing does it mean that error has been detected.</li>
+              </ul>  
+            </p>
+             <p>Other Components
+              <ul>
+                <li>CIDS Handset - used to communicate between the CWS and other cabin stations including the cockpit.</li>
+                <li>IFE Handset - provides means to make a phone call to ground as in calling MEDLINK.</li>
+                <li>AIP - CIDS calls and emergency related indicators.</li>
+              </ul>  
+            </p>
+             <p>Troubleshooting
+              <ul>
+                <li>When the pursers board the aircraft they should check that the CWS components are operational, particularly the CMT. Any defective component at this stage must be reported to the ground engineers for repair.</li>
+                <li>With the exception of the CMT if any other component becomes defective during the flight then it should be logged as a defect.</li>
+                <li>If the CMT fails during the flight then it can be reset from the IFE Power page on the FAP. More information on resetting the CMT can be found in the IFE Power section under Cabin Systems. If the CMT could not be recovered then the CP could be used instead. The two CP's at UR1 and UR3 has the same functionality as the CMT but neither has a card reader.</li>
+                <li>If there is an emergency involving electrical components in the CWS then the power to the CWS must be turned off using the CWS MAIN POWER switch.</li>
+              </ul>  
+            </p>
+          </div>
+          </div>
+          </div>
+       <div class="panel panel-info">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <h4>FAP/miniFAP</h4>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                  <li role="presentation" class="active"><a href="#fap" aria-controls="fap" role="tab" data-toggle="tab"><strong>FAP</strong></a></li>
+                  <li role="presentation"><a href="#music" aria-controls="music" role="tab" data-toggle="tab"><strong>Cabin Music</strong></a></li>
+                  <li role="presentation"><a href="#temp" aria-controls="temp" role="tab" data-toggle="tab"><strong>Cabin Temperature Controls</strong></a></li>
+                  <!-- <li role="presentation"><a href="#spa" aria-controls="spa" role="tab" data-toggle="tab"><strong>Shower Spa</strong></a></li> -->
+                  <li role="presentation"><a href="#power" aria-controls="power" role="tab" data-toggle="tab"><strong>IFE Power</strong></a></li> 
+                </ul>
+               <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="fap">
+                    <strong>FAP</strong>
+                      <p>FAP has two operating modes which can be toggled using the CIDS and MENU keys located immediately under the touch screen. [MENU] provides access to the applications loaded on the A380 Server System, which includes:
+                        <li>CVMS (Cabin Video Monitoring System)</li>
+                        <li>Connectivity</li>
+                      </p>
+                      <p>Cabin Video Monitoring System – CVMS : Operation
+                        <ol>
+                          <li>Access the Application Menu on the FAP by using the MENU (hard) button.</li>
+                          <li>Select button on the CVMS panel launches the application.</li>
+                          <li>Select Crew type of access.</li>
+                          <li>CVMS then requests that the user provides a password to access the application. This is a precautionary measure to prevent accidental access to the CVMS by unauthorized personnel. The password is a four digit number which can be entered using the number pad displayed on the screen. The last record of passwords which provide access to the CVMS includes: 5712, 5716, and 8841.</li>
+                        </ol>
+                      </p>
+                    <small>Note:
+                      <p>
+                        The intended purpose of the CVMS can only be applied if the system is capable or recording. Since this feature is not yet implemented in the software, the application is not officially available for use. If the senior crew wishes to use the application they can do so only to monitor the progress of a service and the activity of the cabin crew during the service. Since the customers are not informed of the availability of the monitoring system, other usage could have legal implications. Therefore using the CVMS should be done discretely and only if necessary.
+                      </p> 
+                      <p>[CIDS] provides access to the cabin functions mode.  There are two set of functions available which allow the crew to controls the cabin environment and hence its ambiance. The extended set includes additional functions to configure and adjust various application settings. Crew can only access the standard function set. The extended set is reserved for the engineers and maintenance.
+                      </p> 
+                    </small>   
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="music">
+                    <p><strong>Cabin Music</strong>                    
+                     </br>Boarding / Arrival Music</br>Operation</br>
+                      <li>Normally, boarding and arrival music is played automatically by the IFE management software. This has changed on the A380 and the boarding music is played manually from the CIDS cabin functions on the FAP by accessing the BOARDING MUSIC Pad.The current list includes only arrival music and departure music.</li>
+                      </p>   
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="temp">
+                    <p>
+                        <strong>Cabin Temperature</strong>
+                        <li>Cabin Heater –used to turn on/off the heaters where available. Heaters are provided for the showers, FCRC and CCRC (if available).
+                        Unless otherwise advised, crew should not change any settings on this page. The on status of the heaters should be checked by the crew for confirmation.Sometimes if the shower poses problems with dispersing water, using the clean mode a couple of times along with resetting the Shower Heaters have fixed the problem. There are no guarantees that this works in all cases though.</li>
+                    </p>
+                    <p><strong>Floor Temperature</strong>
+                        </br>
+                        <li>In normal situations the floor panels are set to a suitable temperature, which should not require any adjustments by the crew.The pre-defined temperature is fixed and can only be changed by the engineers on ground.</li>
+                    </p>   
+                  </div>
+                    <!-- <div role="tabpanel" class="tab-pane fade" id="spa">                      
+                    <p><strong>Shower Spa</strong>
+                        <li>The Shower Control Page includes a control panel for each shower unit, a Shower Time Settings panel, a Water Quantity panel and a Water Quantity indicator panel.  The values of the Shower Time Settings and Water Quantity must NOT be changed (they must read 5 min for water time and 1 min for timeout). The time out warning is the time when a warning is activated in the shower to indicate to the customer that the water is about to run out. If it is set to one minute then the warning begins one minute before the water ends.</li>
+                    </p>                        
+                    <p><strong>Operation</strong>
+                        <li>Before turning the shower units ON the crew must check with the ground maintenance/engineers if work on the waste and water tanks has been completed. Activating the showers while water tanks are being filled/emptied has resulted in the shower malfunctioning after take-off.</li>
+                    </p>
+                    <p><strong>Troubleshooting</strong>                        
+                        <li>If any error occurs with the Shower Control Page on the FAP the system will generate an error message and the [CAUT] button will start flashing. Pressing the [CAUT] button will provide more details on the error on the system page. If the problem cannot be fixed it must be logged as a defect. If an error related to the heating of the water occurs the heaters page on the FAP must be accessed and the water heater pad of the shower checked. The [On/Off] button should be on. In case of a fault the reset button can be pressed. If the fault is not rectified then the fault must be logged as a defect.</li>
+                    </p>   
+                  </div> -->
+                  <div role="tabpanel" class="tab-pane fade" id="power">
+                    <p><strong>IFE Power</strong></br>
+                        The IFE Power function provides another troubleshooting option for the IFE where by it can reset (turn Off then On again) a group of seat collectively. It also provides means to shut down/reset particular IFE CMT Station. Due to the impact this function might have on the IFE in the cabin, its page has been protected by a password to prevent its accidental use. The password though is the same one used to activate the FAP, which is “686”. The main deck page includes a similar layout of the IFE zones with their respective On/OFF buttons and the additional IFE related components which includes:
+                    </p>
+                    <p><strong>Galley Cooling & Chillers Control</strong></br>
+                        The Galley Cooling function does not perform any task which requires that it be used by the crew. However, it can serve as a monitor to check all the chilled galleys and detect if there is any fault in any. The indicator is divided into two parts: FAULT, and TEMP. WARNING. The indicator illuminates red when one of the following two situations occur: The expected cooling/chilling temperature has not been reached 80 min after turning on the chiller. In this case the lower half of the indicator illuminates (TEMP. WARNING). This could be the result of the crew leaving the doors of the chilled comportments open too long, preventing the chilling from reaching its intended temperature. The temp. is then checked every 20 min. If the chilling temp. is reached the indicator light goes off. If the ACU (Air Conditioning Unit) in this particular area is faulty, the FAULT part of the indicator illuminates. There is no immediate reason why an ACU in a particular galley might fail. However, the senior crew can further investigate by checking the Galley Cooling Page on the FAP.
+                        <small>Note: The Galley Cooling function cannot be used to fix any fault reported in any of the galleys; it can only provide messages which might indicate a fault. This information can be useful for the engineers when trying to fix ACU related problems.</small>
+                    </p>
+                  </div>
+                     
+                </div>
+                </div>
+    </div>
+              </div> 
+                <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <h4>Window Shades</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+             <div class="panel-body">
+              <p>Electric window shades are opened and closed electrically. The window shades have 2 layers:  
+              <ul>
+                <li>1 layer of thin material which blocks sunlight but provides full brightness</li>
+                <li>1 layer of thick material which blocks all sunlight and brightness</li>
+                <li>The window shades have 3 states:</li>
+                <li>Open - both layers are open</li>
+                <li>Mid/Sheer - the thin layer is closed</li>
+                <li>Closed - both layers are closed</li>
+              </ul>
+              </p>
+            <p>Operation
+              <ul>
+                <li>Customers have full control over the electric windows shades. In normal circumstances, do not use Crew Controls to override the customer’s setting of the window shade.  Use the Crew controls as part of cabin preparation before boarding or landing.</li>
+              </ul>
+            </p>
+            <p>Customer Controls: 
+              <ul>
+                <li>The window frame has an up and down button to adjust the window shades Crew Controls</li>
+                <li>FAP at ML1 or UL1</li>
+                <li>If the FAP is not showing the CIDS functions, press the CIDS button under the FAP screen.</li>
+                <li>Touch Window Shades on the function selector.</li>
+                <li>Touch Select in the FIRST CLASS, BUSINESS CLASS or LOUNGE panel.</li>
+                <li>Touch Open, Mid or Close under LEFT, LEFT & RIGHT or RIGHT.</li>
+                <li>LOCAL CONTROL must be on (green) for customers to control the window shades.</li>
+              </ul>
+            </p>
+            <p>Troubleshooting: 
+              <ul>
+                <li>A manual tool (screw driver) is available in the base compartment of UL2 and UR2 jumpseats.</li>
+                <li>If an electric window shade fails, collect the manual tool, fit the tool into the hole between the up and down buttons on the window frame and gently press and turn to lock the tool into the screw in the hole.</li>
+                <li>To open the window shade, turn the tool anticlockwise.</li>
+                <li>To close the window shade, turn the tool clockwise.</li>
+                <li>Only the thin layer can be closed.</li>
+              </ul>
+            </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingFive">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                <h4>Shower & Spa</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingFive">
+             <div class="panel-body">
+               <div class="container">
+              <div class="col-md-7">
+                <p>
+                <strong>Shower Control Page</strong></br>
+                The Shower Control Page includes a control panel for each shower unit [Shower Time Settings] panel, a [Water Quantity] panel and a [Water Quantity Indicator] panel.  The values of the Shower Time Settings and Water Quantity must NOT be changed (they must read 5 min for water time and 1 min for timeout). The time out warning is the time when a warning is activated in the shower to indicate to the customer that the water is about to run out. If it is set to one minute then the warning begins one minute before the water ends.
+                <p>
+                <strong>Operation</strong>    
+                <ul>
+                  <li>Before turning the shower units ON the crew must check with the ground maintenance/engineers if work on the waste and water tanks has been completed. Activating the showers while water tanks are being filled/emptied has resulted in the shower malfunctioning after take-off.</li>
+                  <li>[ON] - pre-heating process which lasts for approx. 15 min. The pre-heating process occurs only once when the showers are first turned ON. Any pre-heating that occurs during the flight between shower uses lasts approx. 5 min.</li>
+                  <li>[READY FOR USE] indicates that the shower unit is ready to be used by the customers. The panel also includes a time line indicator which gets filled with a blue and amber line. When the shower is in use the blue bar indicator gradually shrink as water gets dispersed. When the amber area (last 1 min) is reached, the warning inside the shower is activated. When the last minute is reached, the water inside the shower stops flowing. The gage inside the shower reflects that there is a one minute left of water usage. The customer has to press the water flow knob to receive 10 seconds worth of water. This process is repeated until the one minute of water is used up (6 x 10 seconds disperses).</li>
+                  <li>After each usage the CSA cleans the shower unit. Before entering the shower the CSA must press the [Clean Mode] button to get 30 seconds of water (3 x 10 seconds disperses) to clean the unit with. Once done, the CSA must press on the [Reset] button before the shower can be used by the next customer.</li>
+                </ul> 
+                </p>
+                <p><small>Note:
+                  <li>The clean mode allows the CSA to use the shower water while the shower door is open. If the customer attempts to open the door while showering the water immediately stops. Water will not flow until the door is closed. Inform the learners the current slide shows the indicator and the shower handset inside the shower unit.</li></small>
+                </p>  
+                <p><strong>Troubleshooting</strong></br>
+                  <li>If any error occurs with the Shower Control Page on the FAP the system will generate an error message and the [CAUT] button will start flashing. Pressing the [CAUT] button will provide more details on the error on the system page.Sometimes if the shower poses problems with dispersing water, using the clean mode a couple of times along with resetting the Shower Heaters have fixed the problem. There are no guarantees that this works in all cases though.If any of the CIDS cabin functions, FAPs or MFAPs fail inform the Flight Crew. If the issue is not fixed send an LICCC message to ground and follow any instructions received.If the issue still not fixed, log it in the Cabin/IFE Defect Log Book and write a KIS report.</li> 
+                
+              </ul>
+            </p>
+              </p>
+              </div>
+              <div class="col-md-5">
+                <img src="dist/images/showerspa.jpg" alt="Shower Spa" width=400px height=300px>
+              </div>
+              
+              </div>
+              
+              
+            
+            </div>              
+          </div>
+          </div>        
+         <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingSix">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                <h4>Social Area</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+             <div class="panel-body">
+               <strong>Social Area Water Feature</strong>
+               <p>Overview
+                 <ul>
+                 <li>The water feature in the middle and a shelved compartment on each side. The compartments doors, which support a set of shelves, open towards the centre of the monument. So, when both doors are open they completely cover the water feature in the middle.</li>
+                 </ul>
+               </p>
+                <p>Operation
+                  <ul>
+                  <li>The water feature should be operated for customer’s boarding and during flight when the Social Area is not in use. The water feature must be turned Off for take off and landing. The water feature is turned ON/OFF by pressing the ON/OFF button on the panel. An amber led next to the button will illuminate when the water feature is On.</li> 
+                  </ul>
+                </p>
+                <p>Indicator LED Description:
+                  <ul>
+                  <li>ON/OFF Illuminates when the water feature is ON.</li>
+                  <li>WATER LEVEL - FULL/NORMAL/LOW Indicates the water level in water feature supply tank. In normal operation either FULL or NORMAL would be illuminated. If LOW illuminates then a large bottle of water should be poured in the slot at the rear of the inside of the Social Area monument</li>
+                  <li>FAULT – TANK EMPTY Illuminates when there is no water in the supply tank of the water feature.</li>
+                  <li>FAULT – DOOR OPEN Illuminates when either of the shelve doors is open. Opening any of the doors causes the water feature to stop automatically</li>
+                </ul>
+                </p>
+        </div>
+          </div>
+         </div>
+              <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingSeven">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                <h4>Lounge</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+             <div class="panel-body">
+               <strong>Lounge</strong>
+               <p>Lounge Lighting
+                 <ul>
+                   <li>Ensure that the FAP is showing the lighting controls on the upper deck.</li>
+                   <li>Touch the Select button on the LOUNGE panel.</li>
+                   <li>Touch BRT or OFF, or use the up (+) and down (-) buttons to increase/decrease the lighting on the adjust panel that appears.</li>
+                   <li>To play a mood lighting scenario, touch Board, Siesta, Lounge, Night, or Sunrise</li></ul>
+               </p>
+                <p>Lounge Lighting Panel
+                  <ul>
+                  <li>Locate the LOUNGE LIGHTING panel inside the bar area and press the PWR ON button.</li>
+                  <li>Use the up and down arrow buttons to increase or decrease the lighting intensity.</li>
+                  <li>The PWR OFF button is used to turn off the additional lights when the Lounge is not used.</li> 
+                  </ul>
+                </p>               
+        </div>
+      </div>
+    </div>   
+         <script src="dist/js/jquery1.12.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="dist/js/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">   
+      $(document).ready(function() {
+        var anchor = window.location.hash;
+        $(anchor).collapse('toggle');        
+        $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+        });
+       });             
+</script>
+ <script src="dist/js/A380.js"></script> 
+ <script src="dist/js/custom.js"></script>
+    </body>
+</html>

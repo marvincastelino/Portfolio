@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Metro, a sleek, intuitive, and powerful framework for faster and easier web development for Windows Metro Style.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development">
+    <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
+
+    <link rel='shortcut icon' type='image/x-icon' href='dist/images/cs.ico' />
+    <title>Cabin System and Devices</title>
+    
+
+    <link href="dist/css/metro.css" rel="stylesheet">
+    <!--<link href="dist/css/metro-icons.css" rel="stylesheet">-->
+    <link href="dist/css/metro-responsive.css" rel="stylesheet">    
+    <script src="dist/js/jquery-2.1.3.min.js"></script>
+    <script src="dist/js/metro.js"></script>  
+    <!--<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+
+    <style>       
+        .tile-area-controls {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+            
+        }
+
+        .tile-group {
+            left: 100px;
+        }
+
+        .tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+            
+        }
+
+        /*#charmSettings .button {
+            margin: 5px;
+        }
+
+        .schemeButtons {
+            width: 300px;
+        }*/
+
+        @media screen and (max-width: 640px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+            .tile-area-controls {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+
+        }
+    </style>
+
+    <script>
+        (function($) {
+            $.StartScreen = function(){
+                var plugin = this;
+                var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+                plugin.init = function(){
+                    setTilesAreaSize();
+                    if (width > 640) addMouseWheel();
+                };
+
+                var setTilesAreaSize = function(){
+                    var groups = $(".tile-group");
+                    var tileAreaWidth = 30;
+                    $.each(groups, function(i, t){
+                        if (width <= 640) {
+                            tileAreaWidth = width;
+                        } else {
+                            tileAreaWidth += $(t).outerWidth() + 30;
+                        }
+                    });
+                    $(".tile-area").css({
+                        width: tileAreaWidth
+                    });
+                };
+
+                var addMouseWheel = function (){
+                    $("body").mousewheel(function(event, delta, deltaX, deltaY){
+                        var page = $(document);
+                        var scroll_value = delta * 50;
+                        page.scrollLeft(page.scrollLeft() - scroll_value);
+                        return false;
+                    });
+                };
+
+                plugin.init();
+            }
+        })(jQuery);
+
+        $(function(){
+            $.StartScreen();
+
+            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super");
+
+            $.each(tiles, function(){
+                var tile = $(this);
+                setTimeout(function(){
+                    tile.css({
+                        opacity: 1,
+                        "-webkit-transform": "scale(1)",
+                        "transform": "scale(1)",
+                        "-webkit-transition": ".3s",
+                        "transition": ".3s"
+                    });
+                }, Math.floor(Math.random()*500));
+            });
+
+            $(".tile-group").animate({
+                left: 0
+            });
+        });
+
+        // function showCharms(id){
+        //     var  charm = $(id).data("charm");
+        //     if (charm.element.data("opened") === true) {
+        //         charm.close();
+        //     } else {
+        //         charm.open();
+        //     }
+        // }
+
+        function setSearchPlace(el){
+            var a = $(el);
+            var text = a.text();
+            var toggle = a.parents('label').children('.dropdown-toggle');
+
+            toggle.text(text);
+        }
+
+        $(function(){
+            var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
+            $(".tile-area").removeClass (function (index, css) {
+                return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+            }).addClass(current_tile_area_scheme);
+
+            $(".schemeButtons .button").hover(
+                    function(){
+                        var b = $(this);
+                        var scheme = "tile-area-scheme-" +  b.data('scheme');
+                        $(".tile-area").removeClass (function (index, css) {
+                            return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                        }).addClass(scheme);
+                    },
+                    function(){
+                        $(".tile-area").removeClass (function (index, css) {
+                            return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                        }).addClass(current_tile_area_scheme);
+                    }
+            );
+
+            $(".schemeButtons .button").on("click", function(){
+                var b = $(this);
+                var scheme = "tile-area-scheme-" +  b.data('scheme');
+
+                $(".tile-area").removeClass (function (index, css) {
+                    return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                }).addClass(scheme);
+
+                current_tile_area_scheme = scheme;
+                localStorage.setItem('tile-area-scheme', scheme);
+
+                showSettings();
+            });           
+        });
+     </script>
+
+</head>
+<body style="overflow-y: hidden; background: linear-gradient(135deg, rgb(63,18,96),rgb(63,18,96)50%, rgb(113,40,168)); background-color:rgb(125,24,125)" >    
+    
+    <div class="container"> 
+        <div class="tile-area ">
+            <img src="dist/images/main/Taglines_1.png" width=208px height=88px></div>
+            <div><h2 class="tile-area-title fg-white"></br> CABIN SYSTEMS & DEVICES</h2></div> 
+        <div class="tile-group double">
+           <span class="tile-group-title">Inflight Entertainment</span>
+            <div class="tile-container">
+                <a href="ice.html" class="tile-wide bg-red fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/ice.jpg" class="icon" data-role="fitImage" data-format="fill">
+                    </div>
+                    <span class="tile-label">ice</span>
+                </a>                
+                <a href="ice.html#collapseOne" class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/ice_i.jpg" class="icon">
+                    </div>
+                    <span class="tile-label">Information</span>
+                </a>
+                <a href="ice.html#collapseTwo" class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/ice_c.jpg" class="icon">
+                    </div>
+                    <span class="tile-label">Communication</span>
+                </a>
+                <a href="ice.html#collapseThree" class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/ice_e.jpg" class="icon">
+                    </div>
+                    <span class="tile-label">Entertainment</span>
+                </a>
+                 <div class="tile-small bg-darkBlue fg-white" data-role="tile">
+                    <div class="tile-content iconic"><img src="dist/images/main/5.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label"></span>
+                    </div>
+                </div>
+                <a href="ice.html#collapseFour" class="tile-small bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic"><img src="dist/images/main/6.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">What to Promote</span>
+                    </div>
+                </a>                
+                 <div class="tile-small bg-emerald fg-white" data-role="tile">
+                    <div class="tile-content iconic"><img src="dist/images/main/7.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label"></span>
+                    </div>
+                </div>
+                <a href="ice.html#collapseFive" class="tile-small bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic"><img src="dist/images/main/8.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">How to Reset</span>
+                    </div>
+                </a>               
+            </div>             
+        </div>
+
+        <div class="tile-group double">
+            <span class="tile-group-title">A380</span>
+            <div class="tile-container">
+                <div class="tile-wide" data-role="tile" >
+                    <div class="tile-content">
+                        <a href="A380.html#collapseOne"><img src="dist/images/A380/A380_wide.jpg" data-role="fitImage" data-format="fill"></a>                    
+                    </div>
+                    <div class="tile-label">Configuration</div>
+                </div>
+                <div class="tile-wide bg-opwhite fg-white" data-role="tile" data-role="tile" data-effect="slideUpDown">
+                    <div class="tile-content iconic">
+                       <a href="A380.html#collapseZero"><img src="dist/images/A380/Seat.jpg" data-role="fitImage" data-format="fill"></div>
+                    <div class="tile-label">Suite/Seats</div></a>
+                </div>
+                <div class="tile-wide bg-opwhite fg-white" data-role="tile" data-role="tile" data-effect="slideUpDown">
+                    <div class="tile-content iconic">
+                        <a href="A380.html#collapseFive"><img src="dist/images/A380/showerspa.jpg" data-role="fitImage" data-format="fill">                 
+                    </div>
+                    <div class="tile-label">Shower Spa</div></a>     
+                </div>                              
+                <div class="tile-small bg-opwhite fg-white" data-role="tile" onclick="document.location.href='A380.html#collapseTwo'">
+                    <div class="tile-content iconic">                        
+                    </div><img src="dist/images/main/1.png" data-role="fitImage" data-format="fill">
+                    <span class="tile-label">CWS</span>
+                </div>
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="document.location.href='A380.html#collapseSix'">
+                    <div class="tile-content iconic"><img src="dist/images/main/2.png" data-role="fitImage" data-format="fill">                     
+                        <span class="tile-label">Social Area Water Feature</span>
+                    </div>
+                </div>
+                <div class="tile-small bg-opwhite fg-white" data-role="tile" onclick="document.location.href='A380.html#collapseSeven'">
+                    <div class="tile-content iconic"> <img src="dist/images/main/3.png" data-role="fitImage" data-format="fill">                       
+                        <span class="tile-label">Lounge</span>
+                    </div>
+                </div>   
+                <div>
+                <div class="tile-small bg-darkBlue fg-white" data-role="tile" onclick="document.location.href='A380.html#collapseFour'">
+                    <div class="tile-content iconic"><img src="dist/images/main/4.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label" >Window Shades</span>
+                    </div>
+                </div>
+                 <div class="tile bg-opwhite fg-white" data-role="tile">
+                        <div class="tile-content iconic icon"> 
+                            <a href="A380.html#collapseThree"><img src="dist/images/main/5.png" data-role="fitImage" data-format="fill">
+                            <span class="tile-label">FAP/ miniFAP</span></a>
+                        </div>
+                    </div>  
+                    <div class="tile bg-opwhite fg-white" data-role="tile">
+                            <div class="tile-content iconic icon"> 
+                                <a href="moodlighting.html"><img src="dist/images/main/6.png" data-role="fitImage" data-format="fill">
+                                <span class="tile-label">Mood Lighting</span></a>
+                            </div>
+                        </div> 
+                    </div>
+            </div>
+        </div>
+
+       
+
+        <div class="tile-group double">
+            <span class="tile-group-title">B777</span>
+            <div class="tile-container">
+                <div class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content">
+                         <a href="B777.html#collapseOne" class="live-slide"><img src="dist/images/B777/B777_wide.jpg" data-role="fitImage" data-format="fill"data-frame-color="bg-emerald">
+                        <div class="tile-label">Configuration</div></a>
+                    </div>
+                </div>
+                <div class="tile-wide" data-role="tile" data-role="tile" data-role="tile" data-effect="slideUp" >
+                    <div class="tile-content">
+                        <a href="B777.html#collapseTwo"><img src="dist/images/B777/seata.jpg" data-role="fitImage" data-format="fill"data-frame-color="bg-emerald">
+                        <div class="tile-label">Business Class Seats</div> </a>
+                        
+                    </div>
+                </div>
+               <a href="B777.html#collapseThree" class="tile bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/5.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">CSCP/CACP</span>
+                    </div>
+                </a>
+                <a href="B777.html#collapseFour" class="tile bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/6.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Window Shades</span>
+                    </div>
+                </a>
+                <a href="moodlighting.html" class="tile-wide bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic">
+                        <img src="dist/images/moodlighting/moodlighting.jpg" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Mood Lighting</span>
+                    </div>
+                </a> 
+                       
+            </div>
+        </div>                    
+             
+
+        <div class="tile-group double">
+            <span class="tile-group-title">Videos</span>
+            <div class="tile-container">
+                 <div class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic"> 
+                        <img src="dist/images/main/devices.jpg" data-role="fitImage" data-format="fill">
+                    </div>
+                    <div class="tile-label"></div> 
+                </div>
+                 <div class="tile-wide bg-opwhite fg-white" data-role="tile" onclick="document.location.href='mod.html'">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/mod.png" class="icon">
+                    </div>
+                    <span class="tile-label">MOD</span>
+                    </div>
+                </div>
+              <div class="tile bg-opwhite fg-white" data-role="tile" onclick="document.location.href='videos.html#collapseOne'">
+                    <div class="tile-content iconic"> 
+                        <img src="dist/images/main/7.png" data-role="fitImage" data-format="fill">
+                    </div>
+                    <div class="tile-label">Purser</br> Job Accountabilities</div> 
+                </div>
+                 <div class="tile bg-opwhite fg-white" data-role="tile" onclick="document.location.href='videos.html#collapseTwo'">
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/8.png" data-role="fitImage" data-format="fill">
+                    </div>
+                    <span class="tile-label">Cabin Supervisor</br> Job Accountabilities</span>
+                </div>
+                </div>
+               
+    </div>
+    </div>
+
+    <script src="custom.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>ice</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.cs" rel="stylesheet">
+    <script src="dist/js/jquery-3.1.0.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="dist/css/paperbs.css" rel="stylesheet">
+  
+    <!-- Custom script to open from panel from main page 
+      https://stackoverflow.com/questions/13412778/bootstrap-collapse-open-the-given-id-fragment
+    https://www.experts-exchange.com/questions/28635270/Open-bootstrap-3-2-0-accordion-panel-from-another-page-using-querystring.html
+    -->
+    
+
+  </head>
+
+   <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container-fluid containernav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">Cabin System and Devices</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="main.html">Home</a></li>
+            <li class="active" ><a href="ice.html" class="active"role="button">Inflight Entertainment</a>
+            <li><a href="A380.html" class="active"role="button">Airbus 380</a></li>
+            <li><a href="B777.html" class="active"role="button">Boeing 777</a></li>
+            <li><a href="mod.html" class="active"role="button">Meal Ordering Device</a></li>
+            <li><a href="videos.html" class="active"role="button">Job Accountabilities</a></li>
+            <li><a href="moodlighting.html" class="active"role="button">Mood Lighting</a></li>
+           </ul>      
+         </div>
+      </div>    
+    </nav>
+
+    <div class="container">      
+      <div class="well well-lg" style="margin-top:20px">
+        <h1>Inflight Entertainment</h1>
+         <p>You can browse our listings to see what’s playing on your flight this month, and find out why we’ve won the Skytrax award for World’s Best Inflight Entertainment for 13 years in a row. Check out the latest and greatest movies, TV shows, music and games, on demand and in multiple languages.</p>
+        <p>Listen to podcasts and radio shows, and keep up with live news and sport on select flights.</p>
+        <p>There are up to <strong>2,500 channels</strong> to explore, so take a look at what’s on your flight and create your personal playlist of favourites.</p>
+      </div>
+    
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-success">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4> Information</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+             <div class="panel-body">
+              <p>The Information section includes several topics which are regularly updated and incremented:  
+              <ul>
+                <li>Duty Free – interactive browsing on channel 9200</li>                
+                <li>News Headlines - live, ‘ticker-tape style’ news from BBC</li>
+                <li>Skywards – details about our frequent flyer programme</li>
+                <li>Emirates Route Network</li>
+                <li>About Emirates</li>
+                <li>About Dubai</li>
+                <li>Flight Information – broadcasts the flight progress as well as Airshow channel and live cameras - channel 96</li>
+              </ul> 
+              </p>
+      </div>
+    </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h4>Communication</h4>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-justified" role="tablist">
+                  <li role="presentation" class="active"><a href="#Wi-Fi" aria-controls="Wi-Fi" role="tab" data-toggle="tab"><strong>Wi-Fi in the sky</strong></a></li>
+                  <li role="presentation"><a href="#seat" aria-controls="seat" role="tab" data-toggle="tab"><strong>In-seat phone, SMS and email</strong></a></li>
+                  <li role="presentation"><a href="#Mobile" aria-controls="Mobile" role="tab" data-toggle="tab"><strong>Mobile phone and data roaming</strong></a></li>                                    
+                </ul>
+              </div>  
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="Wi-Fi">
+                    <p>
+                      <strong>Stay Connected while you fly</strong>
+                      <ul>
+                        <li>It’s free to post or tweet from your seat on all of our A380s and most Boeing 777 aircraft. Enjoy 20MB of free data (that’s enough to browse your favourite social networks).</li> </ul>
+                        <div style="text-align:center">
+                       <img src="dist/images/ice/wifi_qr.png" alt="QR Code for Onboard Update"/></p>
+                       <h4  class="desc_content">Scan QR code to Learn more about our Wi-Fi services</h4>
+                       </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="seat">
+                    <p>The Communication section offers othet than Seat to Seat the option to call:
+                      <ul>
+                        <li>Air to Ground - 5$/minute</li>
+                        <li>SMS and Email - 1$/minute for both outgoing and incoming messages by using the Emtel System from the seat's handset.</li>
+                      </ul>  
+                        <p style="font-weight: bold;"> 
+                          When using the in-seat phone a US$5 fee may show on the customer’s credit card, even if they sent a US$1 SMS.</br>
+                          Inform customers this is a deposit that will be refunded. They will only pay for actual calls or messages.
+                        </p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="Mobile">
+                    <p>
+                      <strong>Mobile phone and data roaming</strong>
+                      <ul>
+                        <li>Make calls on your mobile just as you would when you’re on the ground*</li>
+                        <li>To make calls or use data on your mobile, your mobile phone or global roaming provider must have a roaming agreement with OnAir or Aeromobile, our service providers.</li>
+                        <li>You’ll be charged by your service provider in line with international roaming rates. You can use your mobile on over 300 flights a day, including all of our A380 flights. You can also connect to the internet using our Wi-Fi services on all A380s and most Boeing 777s.</li>
+                        </br>
+                        <small>* Feature available only on ex3 ice</small>                    
+                      </ul>
+                    </p>
+                  </div>
+                   </div>               
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <h4> Entertainment</h4>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            
+            </br>            
+             <div class="container-fluid">
+              <div class="row" >                
+                <div class="col-md-8"> <!-- check out custom.js for video controls -->
+                      <video id="myVideo" width="700" height="400" controls loop muted>
+                      <source src="dist/videos/ice.mp4" type="video/mp4" >                
+                      Your browser does not support the video tag.
+                      </video>
+              </div>
+                <div class="col-md-4">
+                 <img src="dist/images/ice/skytrax.jpg" class="img-responsive" alt="ice Guide" style="display:block;height:auto;max-width:100%;margin:0 auto;">
+                 </br>
+                 <p>The Entertainment section includes a variety of channels covering a wide range of audio and video pleasantries. The channels are scattered among Movies, TV, World Radio, Music & CDs, and Games.</p>                 
+                </div>
+            </div>
+            </div> 
+          </div>
+        </div>
+        </div>
+      
+        <div class="panel panel-warning">
+          <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h4>What To Promote</h4>
+              </a>
+            </h4>
+          </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-justified" role="tablist">
+                  <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><strong>My Settings Menu</strong></a></li>
+                  <li role="presentation"><a href="#usb" aria-controls="usb" role="tab" data-toggle="tab"><strong>USB Media Player</strong></a></li>
+                  <li role="presentation"><a href="#voyager" aria-controls="voyager" role="tab" data-toggle="tab"><strong>Voyager App</strong></a></li>
+                  <li role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab"><strong>Audio</strong></a></li>
+                  <li role="presentation"><a href="#gates" aria-controls="gates" role="tab" data-toggle="tab"><strong>Connecting Gates</strong></a></li>
+                  <!-- <li role="presentation"><a href="#qibla" aria-controls="qibla" role="tab" data-toggle="tab"><strong>Qibla Screen</strong></a></li> -->
+                </ul>
+              </div>  
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="settings">
+                    <p>
+                      <ul>
+                        <strong>My Settings Menu allows customers to personalise their ice experience:</strong>
+                        </br>
+                        <li>Display, Audio & HDMI * - save settings</li>
+                        <li>Multilingual Interface *- changes the system language to one of the 15 languages available( includes menus, button labels, readable content)</li>
+                        <li>Timer Alarm * - wake-up alarm facility through the head set only</li> 
+                        <li>Next Seat Share - adjacent seated customers can simultaneously view the same content</li>
+                        </br>
+                        <small>* Feature available only on ex3 ice</small>
+                      </ul>
+                    </p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="usb">
+                    <p>
+                      <ul>
+                        <li>Allows customers to play music (mp3), pictures (jpeg), documents (pdf) or movie files (avi, mp4)** from personal USB device on the IFE screen. </li>
+                        </br>
+                        <small>* Feature available only on ex3 ice</small>                    
+                      </ul>
+                    </p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="voyager">
+                    <p>
+                      <ul>
+                        <strong>Voyager App *</strong>
+                        </br>
+                        <li>The flight path map, which is part of Airshow1, is now a full interactive app which allows you to zoom in/out, move and rotate the map in any direction, all by using finger gestures on the screen.</li>
+                        <li>Cities on the map can now be selected to display related information and details.</li>
+                        <li>Maps, as well as the flight path, can be viewed in a variety of ways including, top view, window view and rotating view and much more.</li>
+                        </br>
+                        <small>* Feature available only on ex3 ice</small> 
+                      </ul>
+                    </p>
+                  </div>  
+                  <div role="tabpanel" class="tab-pane fade" id="audio">
+                    <p>
+                      <ul>
+                        <strong>Audio Slideshow *</strong>                    
+                        <li>When selecting music, customers will have the options of running a slide show of images while the music is playing.</li>                    
+                      </ul>
+                      <ul>
+                        <strong>Audiobooks</strong>  
+                        <li>Audiobooks are an ideal entertainment option for customers with a visual impairment.</li>                     
+                        </br>
+                        <small>* Feature available only on ex3 ice</small> 
+                      </ul>
+                    </p>
+                  </div>  
+                  <div role="tabpanel" class="tab-pane fade" id="gates">
+                    <p>
+                      <ul>
+                        <li>Dedicated page for the connecting gates/flights*</li>
+                        </br>
+                        <small>* Feature available only on ex3 ice</small> 
+                      </ul>
+                    </p>
+                  </div>  
+                  <!-- <div role="tabpanel" class="tab-pane fade" id="qibla">
+                    <ul>
+                        <strong>Qibla Screen *</strong>
+                        <li>Our Muslim customers need not wait anymore for the Aishow to display the Qibla direction, now it can be accessed anytime from the Information section of ice.</li>
+                        <small>* Feature available only on ex3 ice</small>
+                      </ul>                       
+                        
+                      
+                  </div>  -->
+                </div>
+              </div>              
+            </div>        
+        <div class="panel panel-danger">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <h4>How To Reset</h4>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="panel-body">
+              <ul class="nav nav-pills nav-justified" role="tablist">
+                  <li role="presentation" class="active"><a href="#reset" aria-controls="reset" role="tab" data-toggle="tab"><strong>IFE Reset</strong></a></li>
+                  <!-- <li role="presentation"><a href="#mode" aria-controls="mode" role="tab" data-toggle="tab"><strong>Mode Controller Reset</strong></a></li>                                                      -->
+                </ul>
+               <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="reset">
+                    <strong>IFE Reset</strong>
+                    <p>In the event where the IFE freezes or locks up at a seat, the crew should reset the seat ensuring to verify the progress and keep the customer informed of the efforts as well as verify if the issue was solved. If interactive fails and resetting does not resolve the problem, the crew should first attempt to re-allocate the customer.</p>
+                    <p><strong>STEPS</strong>
+                      <ol>
+                        <li>Type on handset: *RESET# (excepting PAN3000i - ice)</li>
+                        <li>Reset SEAT / ICE from CMT</li>
+                        <li>Reset SEAT BOX </li>
+                        <li>Reset Seat Power Module (SPM) and wait for 10 minutes*</li>
+                        <li>If until this stage the reset was not successful and relocating the customer is not possible, due to unavailability of seats, the crew should use the Seat Control option in the CMT to set the screen to a channel requested by the customer. Push channel into zone/seat from SEAT CONTROL page on CMT.</li>
+                        <li>Contact GROUND MAINTENANCE for further assistance</li>
+                        <li>With authorisation from Ground Maintainance, you may reset the entire IFE sytem by using the Master Power option - A380: PAX SYS / B777: MASTER POWER </li>
+                      </ol>
+                      <small><strong>*SPM switches</strong>
+                        <p>Don’t use a SPM switch (resets seat power/IFE power) unless you’re authorised to do so by Engineering. Inflight, you can contact Engineering by sending a Major Engineering Defect message from the CMT. If there’s an issue with the CMT, you can also contact Engineering via the Flight Crew.</p> 
+                        <p><i>If you’re authorised to use a SPM switch:</i>
+                          <li>Let the Flight Crew know</li>
+                          <li>Write a KIS report</li>
+                          <li>Make a log in the Aircraft Cabin/IFE Defect Log Book</li>
+                        </p>
+                      </small>
+                    </div>
+                  <!-- <div role="tabpanel" class="tab-pane fade" id="mode">
+                      <p><strong>STEPS</strong>
+                        <ol>
+                          <li>Type on handset: *RESET# (excepting PAN3000i - ice)</li>
+                          <li>Reset SEAT / ICE from CMT</li>
+                          <li>Reset SEAT BOX </li>
+                          <li>Reset Seat Power Module (SPM) and wait for 10 minutes*</li>
+                          <li>If until this stage the reset was not successful and relocating the customer is not possible, due to unavailability of seats, the crew should use the Seat Control option in the CMT to set the screen to a channel requested by the customer. Push channel into zone/seat from SEAT CONTROL page on CMT.</li>
+                          <li>Contact GROUND MAINTENANCE for further assistance</li>
+                          <li>With authorisation from Ground Maintainance, you may reset the entire IFE sytem by using the Master Power option - A380: PAX SYS / B777: MASTER POWER </li>
+                        </ol>
+                        <small><strong>*SPM switches</strong>
+                          <p>Don’t use a SPM switch (resets seat power/IFE power) unless you’re authorised to do so by Engineering. Inflight, you can contact Engineering by sending a Major Engineering Defect message from the CMT. If there’s an issue with the CMT, you can also contact Engineering via the Flight Crew.</p> 
+                          <p><i>If you’re authorised to use a SPM switch:</i>
+                            <li>Let the Flight Crew know</li>
+                            <li>Write a KIS report</li>
+                            <li>Make a log in the Aircraft Cabin/IFE Defect Log Book</li>
+                          </p>  
+                  </div>
+                    </div> -->
+                </div>
+                  </div>
+                    
+              <!--(Ref.https://emiratesgroup.sharepoint.com/sites/ccp/Products/Pages/OBU/June-2016/Onboard-Update-June-2016-Cabin-Supervisor-Purser-OPP-PSP.aspx) -->
+
+          </div>
+        </div>
+      </div>         
+        </div>  
+      </div>
+
+      
+    </div> <!-- /container -->    
+ 
+    <script src="dist/js/jquery1.12.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="dist/js/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">   
+      $(document).ready(function() {
+        var anchor = window.location.hash;
+        $(anchor).collapse('toggle');        
+       });             
+</script>
+<script src="dist/js/ice.js"></script>
+        </body>
+</html>
+
+

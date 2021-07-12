@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Videos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.cs" rel="stylesheet">
+    <script src="dist/js/jquery-3.1.0.js"></script>
+
+    
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="dist/css/paperbs.css" rel="stylesheet">
+  
+    <!-- Custom script to open from panel from main page 
+      https://stackoverflow.com/questions/13412778/bootstrap-collapse-open-the-given-id-fragment
+    https://www.experts-exchange.com/questions/28635270/Open-bootstrap-3-2-0-accordion-panel-from-another-page-using-querystring.html
+    -->
+   </head>
+
+   <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container-fluid containernav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">Cabin System and Devices</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="ice.html" class="active"role="button">Inflight Entertainment</a>
+            <li><a href="A380.html" class="active"role="button">Airbus 380</a></li>
+            <li><a href="B777.html" class="active"role="button">Boeing 777</a></li>
+            <li><a href="mod.html" class="active"role="button">Meal Ordering Device</a></li>
+            <li class="active" ><a href="videos.html" class="active"role="button">Job Accountabilities</a></li>
+            <li><a href="moodlighting.html" class="active"role="button">Mood Lighting</a></li>                       
+           </ul>      
+         </div>
+      </div>    
+    </nav>
+
+    <div class="container">      
+      <div class="well well-lg" style="margin-top:20px">
+        <h1>Videos</h1>          
+      </div>
+    
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4>Purser Job Accountabilities</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+             <div class="panel-body">       
+                <div class="container-fluid">
+                  <div class="embed-responsive embed-responsive-16by9" style="box-shadow: 0 4px 8px 0 rgba(0 , 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align: center;padding-top:10px,">
+                    <video id="vid_frame" class="embed-responsive-item" src="dist/videos/purja.mp4" controls allowfullscreen width="800" height="400"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <h4>Cabin Supervisor Job Accountabilities</h4>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+             <div class="panel-body">       
+                <div class="container-fluid">
+                  <div class="embed-responsive embed-responsive-16by9" style="box-shadow: 0 4px 8px 0 rgba(0 , 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align: center;padding-top:10px,">
+                    <video id="vid_frame1" class="embed-responsive-item" src="dist/videos/csvja.mp4" controls allowfullscreen width="800" height="400"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+             
+    </div> <!-- /container -->    
+ 
+    <script src="dist/js/jquery1.12.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="dist/js/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">   
+      $(document).ready(function() {
+        var anchor = window.location.hash;
+        $(anchor).collapse('toggle');        
+       });             
+</script>
+<script src="dist/js/videos.js"></script>
+<script src="sample.js"></script>
+</body>
+</html>
+
+
