@@ -71,3 +71,23 @@ padding:0 130px;
     footer{
     height: 30px;
 }   
+
+@media screen and (max-width: 1180px) {
+    .pdf-container{
+        
+        width: 680px;
+        height: 500px; 
+        border: 1rem solid 
+        rgba(0,0,0,.1);  
+    }
+}
+
+@media screen and (max-width: 844px) {
+    .pdf-container{
+        
+        width: 500px;
+        height: 280px; 
+        border: 1rem solid 
+        rgba(0,0,0,.1);  
+    }
+}
