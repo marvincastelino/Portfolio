@@ -1026,34 +1026,6 @@ a.anchor {
   filter: brightness(1.1);
 }
 
-.app-subgroup {
-  margin-top: 52px;
-  padding-top: 36px;
-  border-top: 1px solid var(--border-soft);
-}
-
-.app-subgroup-head {
-  margin-bottom: 20px;
-  max-width: 640px;
-}
-
-.app-subgroup-title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-size: 22px;
-  color: var(--white);
-  margin: 0 0 8px;
-}
-
-.app-subgroup-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--text-dim);
-  margin: 0;
-}
-
 /* ---------- Closing CTA ---------- */
 .cta {
   position: relative;
