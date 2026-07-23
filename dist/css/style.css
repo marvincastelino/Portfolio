@@ -1491,31 +1491,6 @@ footer.site-footer .footer-built {
 /* ---------- Training Portfolio (archive) page ---------- */
 /* Distinct palette for this page only, from Marvin's reference moodboard:
    Abyssal Anchorfish Blue bg, Palladian cream text, Burning Flame orange accent. */
-body.tp-theme {
-  --red-bright: #ffb162;
-  --amber: #a35139;
-  --bg: #1b2632;
-  --bg-elevated: #2c3b4d;
-  --bg-elevated-2: #26333f;
-  --border: rgba(238, 233, 223, 0.14);
-  --border-soft: rgba(238, 233, 223, 0.07);
-  --black: #1b2632;
-  --ink: #eee9df;
-  --text: #eee9df;
-  --text-dim: #c9c1b1;
-  --text-dimmer: #8f8a7d;
-  --grey-900: #2c3b4d;
-  --grey-700: #c9c1b1;
-  --grey-500: #8f8a7d;
-  --grey-300: rgba(238, 233, 223, 0.2);
-  --grey-150: rgba(238, 233, 223, 0.14);
-  --grey-100: #2c3b4d;
-  --white: #eee9df;
-}
-
-body.tp-theme .navbar { background-color: rgba(27, 38, 50, 0.75) !important; }
-body.tp-theme .navbar.is-scrolled { background-color: rgba(27, 38, 50, 0.92) !important; }
-
 .tp-hero {
   position: relative;
   background: var(--bg);
