@@ -25,6 +25,20 @@ img, video, iframe, embed, object, canvas, svg {
 @media screen and (max-width: 767px) {
   html, body { overflow-x: hidden; }
 
+  /* THE key fix: metro.css hard-codes ".container { width: 960px }".
+     On a phone that forces the whole page to render at a fixed
+     960px-wide desktop canvas, centered and clipped — with
+     horizontal scroll disabled by the design, most of it is simply
+     unreachable. Force it to fill the actual screen width instead. */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
   /* Bootstrap navbar pages: bigger, easier-to-tap nav targets */
   .navbar-toggle { padding: 12px 10px; }
   .navbar-nav > li > a { padding-top: 14px; padding-bottom: 14px; }
@@ -41,6 +55,7 @@ img, video, iframe, embed, object, canvas, svg {
     height: auto !important;
   }
   .tile-area {
+    width: 100% !important;
     height: auto !important;
     min-height: 100vh;
     overflow: visible !important;
