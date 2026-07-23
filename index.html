@@ -5,140 +5,210 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Marvin's Portfolio</title>
+    <meta name="description" content="Marvin Castelino — instructional design, video production and digital learning content for airline cabin crew training.">
+    <title>Marvin Castelino — Portfolio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
     <link href="dist/css/style.css" rel="stylesheet">
     <script src="dist/js/jquery-3.1.0.js"></script>
 
-    <!-- swiper7 -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- css and js for unite-gallery(vdeos) -->
+    <!-- css and js for unite-gallery (photo tabs) -->
     <script type='text/javascript' src='dist/unitegallery/js/jquery-11.0.min.js'></script>
     <script type='text/javascript' src='dist/unitegallery/js/unitegallery.min.js'></script>
-    <script type='text/javascript' src='dist/unitegallery/themes/video/ug-theme-video.js'></script>
-    <script type='text/javascript' src='dist/unitegallery/themes/compact/ug-theme-compact.js'></script>
-    <link rel='stylesheet' href='dist/unitegallery/themes/video/skin-right-title-only.css' type='text/css' />
-    <link rel='stylesheet' href='dist/unitegallery/css/unite-gallery.css' type='text/css' />
     <script type='text/javascript' src='dist/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
-    <script src='dist/unitegallery/themes/slider/ug-theme-slider.js' type='text/javascript'></script>
-    <script src="dist/js/mediaelement.min.js"></script>
-
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel='stylesheet' href='dist/unitegallery/css/unite-gallery.css' type='text/css' />
 </head>
 
 <body>
     <div class="container-fluid">
-        <nav id="navbar-example" class="navbar sticky-top navbar-expand-xl navbar-dark" style="background-color:#c60c30">
-            <a class="navbar-brand" href="#">Marvin's Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <nav id="navbar-example" class="navbar sticky-top navbar-expand-xl navbar-light">
+            <a class="navbar-brand" href="#">Marvin Castelino<span class="brand-dot">.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="nav" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="nav navbar-collapse collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <div class="nav navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#photo">Design & Photography</a>
+                        <a class="nav-link" href="#about"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#videos">Videos Produced </a>
+                        <a class="nav-link" href="#web"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Interactive Learning Tools</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#artwork">Document Designed</a>
+                        <a class="nav-link" href="#photo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.4"/></svg>Design &amp; Photography</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#web">Web Development</a>
+                        <a class="nav-link" href="#videos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.2 8.8l5.4 3.2-5.4 3.2V8.8z" fill="currentColor" stroke="none"/></svg>Videos Produced</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#artwork"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Manuals, Guides &amp; Presentations</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
+        <div class="hero">
+            <div class="container hero-inner" style="background:none;">
+                <span class="eyebrow">Portfolio</span>
+                <h1 class="hero-name">Marvin<br>Castelino</h1>
+                <p class="hero-tagline">Instructional design, video production and digital learning content for
+                    airline cabin crew training — from service manuals and touchscreen training apps to the
+                    videos and photography used to teach them.</p>
+                <div class="hero-links">
+                    <a href="#videos">Watch the videos</a>
+                    <a href="mailto:marvin.castelino@gmail.com">Get in touch</a>
+                </div>
+            </div>
+            <div class="hero-scroll-cue">Scroll</div>
+        </div>
+
+        <a class="anchor" id="about"></a>
+        <div class="container">
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-main reveal">
+                        <span class="eyebrow">About</span>
+                        <h2 class="about-title">Learning &amp; Development professional, specialising in Digital Learning</h2>
+                        <p class="about-body">10+ years designing and delivering training — including 16 years with
+                            Emirates Airlines and a year building the e-learning platform for a 26,000-employee
+                            healthcare organisation. I work end-to-end: LMS administration and SCORM packaging,
+                            instructional design, video production, and the graphic design and interactive tools
+                            that make training worth sitting through.</p>
+                        <p class="about-body">This site is a working sample of that range — touchscreen training
+                            apps built from scratch, a curated reel of produced videos, the service manuals and
+                            presentations behind them, and the photography from the programmes themselves.</p>
+                        <div class="about-badges">
+                            <span class="about-badge">16 yrs · Emirates Airlines</span>
+                            <span class="about-badge">5 Najm Awards</span>
+                            <span class="about-badge">5.4M+ Unsplash views</span>
+                        </div>
+                        <p class="about-meta">Based in Adelaide, SA — full working rights across South Australia.</p>
+                    </div>
+                    <div class="about-side reveal reveal-1">
+                        <h3 class="about-skills-title">Core Skills</h3>
+                        <ul class="skill-chips">
+                            <li>LMS &amp; Analytics</li>
+                            <li>Instructional Design &amp; Authoring</li>
+                            <li>Facilitation &amp; Delivery</li>
+                            <li>Multimedia Production</li>
+                            <li>Digital &amp; AI</li>
+                        </ul>
+                        <div class="quote-card">
+                            <p class="quote-text">&ldquo;Marvin is amazing :) great tutor!! don&rsquo;t ever let him leave.&rdquo;</p>
+                            <span class="quote-attr">Emirates Cabin Crew Trainee</span>
+                        </div>
+                        <div class="quote-card">
+                            <p class="quote-text">&ldquo;Marvin has had an exceptional year. The Performance Management and Development Team are very fortunate to have you.&rdquo;</p>
+                            <span class="quote-attr">Mazen Wehbe, Line Manager, Emirates Airlines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bento">
+                <div class="bento-grid">
+                    <a class="bento-card bento-lg reveal" href="#web">
+                        <div class="bento-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="bento-num">01</span></div>
+                        <span class="bento-arrow">&#8599;</span>
+                        <h3 class="bento-title">Interactive<br>Learning Tools</h3>
+                        <p class="bento-desc">Touchscreen training tools built from scratch.</p>
+                    </a>
+                    <a class="bento-card reveal reveal-1" href="#photo">
+                        <div class="bento-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.4"/></svg><span class="bento-num">02</span></div>
+                        <span class="bento-arrow">&#8599;</span>
+                        <h3 class="bento-title">Design &amp;<br>Photography</h3>
+                        <p class="bento-desc">Seat guides, service &amp; training galleries.</p>
+                    </a>
+                    <a class="bento-card reveal reveal-2" href="#videos">
+                        <div class="bento-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.2 8.8l5.4 3.2-5.4 3.2V8.8z" fill="currentColor" stroke="none"/></svg><span class="bento-num">03</span></div>
+                        <span class="bento-arrow">&#8599;</span>
+                        <h3 class="bento-title">Videos<br>Produced</h3>
+                        <p class="bento-desc">A curated reel, one player.</p>
+                    </a>
+                    <a class="bento-card reveal reveal-3" href="#artwork">
+                        <div class="bento-head"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg><span class="bento-num">04</span></div>
+                        <span class="bento-arrow">&#8599;</span>
+                        <h3 class="bento-title">Manuals, Guides<br>&amp; Presentations</h3>
+                        <p class="bento-desc">Service manuals, guides &amp; presentations.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <main>
             <div class="container">
-
-                <a class="anchor" id="photo"></a>
+                <a class="anchor" id="web"></a>
                 <div class="wrapper">
-                    <h3 class="p-3 mb-2 bg-dark text-white">Web Development</h3>
-                    <div class="row">
-                        <div class="card" style="width: 15em;">
-                            <img src="dist/img/First Class.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">First<br>Class</h5><a
-                                    href="https://marvincastelino.github.io/fctouchscreen/"
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Digital Learning</span>
+                        <h2 class="section-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Interactive Learning Tools</h2>
+                        <hr class="section-rule">
+                    </div>
+                    <div class="app-grid">
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img src="dist/img/First Class.png" alt="First Class"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">First<br>Class</h5><a
+                                    href="dist/Portfolio/Web development - Touchscreen/First Class/index.html"
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 15em;">
-                            <img src="dist/img/Business Class.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Business<br>Class</h5><a
-                                    href="dist/Portfolio/Web development/Business_Class/index.html"
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img src="dist/img/Business Class.png" alt="Business Class"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">Business<br>Class</h5><a
+                                    href="dist/Portfolio/Web development - Touchscreen/Business Class/index.html"
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 15em;">
-                            <img src="dist/img/Economy Class.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Economy<br>Class</h5><a
-                                    href="dist/Portfolio/Web development/Economy_Class/index.html"
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img src="dist/img/Economy Class.png" alt="Economy Class"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">Economy<br>Class</h5><a
+                                    href="dist/Portfolio/Web development - Touchscreen/Economy Class/index.html"
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 15em;">
-                            <img src="dist/img/Cabin Systems.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cabin<br>Systems</h5><a
-                                    href="dist/Portfolio/Web development/Cabin_Systems/index.html"
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img src="dist/img/Cabin Systems.png" alt="Cabin Systems"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">Cabin<br>Systems</h5><a
+                                    href="dist/Portfolio/Web development - Touchscreen/Cabin Systems/main.html"
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="card" style="width:15em;">
-                            <img src="dist/Portfolio/Artwork and Design/Interesting Facts - Google Maps/Interesting Facts.png"
-                                class=" card-img-top" style="width:auto; height:120px;" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Interesting<br>Facts</h5><a
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img src="dist/Portfolio/Web development - Touchscreen/Duty Free/dist/images/DF_BG.jpg" alt="Duty Free"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">Duty<br>Free</h5><a
+                                    href="dist/Portfolio/Web development - Touchscreen/Duty Free/index.html"
+                                    target="_blank" class="btn btn-dark">Link</a>
+                            </div>
+                        </div>
+                        <div class="app-card">
+                            <div class="app-card-img-wrap"><img
+                                src="dist/Portfolio/Artwork and Design/Interesting Facts - Google Maps/Interesting Facts.png"
+                                alt="Interesting Facts"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">Interesting<br>Facts</h5><a
                                     href="https://www.google.com/maps/d/u/0/viewer?mid=1-1BioOpft2MfwSIOKlWRS4w7qLE&hl=en&ll=20.266490383863538%2C-20.602997327783214&z=2"
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <!-- <div class="card" style="width:15em;">
-                            <img src="dist/img/Lesson Plan.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Ab initio:<br> Lesson Plan</h5><a
-                                    href="https://infospace.emirates.com/newsites/CCTST/Abinitio1/Day3_Welcome_and_ideal_crew.html"
-                                    target="_blank" class="btn btn-dark">Link</a>
-                            </div>
-                        </div> 
-                        <div class="card" style="width: 15em;">
-                            <img src="dist/img/Flexidining.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Business Class:<br>Flexidining</h5><a
-                                    href="http://infospace.emirates.com/newsites/CCTST/doyt/FD_V4.html" target="_blank"
-                                    class="btn btn-dark">Link</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width:15em;">
-                            <img src="dist/img/matrix.png" class=" card-img-top" style="width:auto; height:120px;"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Ab initio e-Assessment</h5><a
-                                    href="dist/Portfolio/Course Management Templates/Assessment Matrix - Abnitio Training/1. Electronic Template V15 (14OCT19).pdf"
-                                    target="_blank" class="btn btn-dark">Link</a>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
+
+                <a class="anchor" id="photo"></a>
                 <div class="wrapper">
-                    <div>
-                        <h3 class="p-3 mb-2 bg-dark text-white">Design & Photography</h3>
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Design</span>
+                        <h2 class="section-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.4"/></svg>Design &amp; Photography</h2>
+                        <hr class="section-rule">
                     </div>
 
                     <nav>
@@ -156,193 +226,127 @@
                                 aria-controls="roster" aria-selected="false">Service Roster</a>
                         </div>
                     </nav>
-               
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="seat-demo" role="tabpanel"
                             aria-labelledby="seat-demo-tab">
+                            <div class="gallery-frame">
                             <div id="gallery-sg" style="display:none;">
-                                <!-- <a
+                                <a href="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG">
+                                    <img alt=""
+                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG"
+                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG"
+                                        data-description="Seat Demo Stand" style="display:none">
+                                </a>
+                                <a
                                     href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - B777.jpg">
                                     <img alt=""
                                         src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - B777.jpg"
                                         data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - B777.jpg"
-                                        data-description="B777 YC" style="display:none">
+                                        data-description="Economy - B777" style="display:none">
                                 </a>
                                 <a
                                     href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A330-340 - JC/A330-340 - JC-Main.jpg">
                                     <img alt=""
                                         src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A330-340 - JC/A330-340 - JC-Main.jpg"
                                         data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A330-340 - JC/A330-340 - JC-Main.jpg"
-                                        data-description="A330-340 - JC" style="display:none">
-                                </a> -->
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A380-JC/A380-JC-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A380-JC/A380-JC-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/A380-JC/A380-JC-01.jpg"
-                                        data-description="A380-JC" style="display:none">
+                                        data-description="Business Class - A330/340" style="display:none">
                                 </a>
                                 <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G1/B777-JC-G1-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G1/B777-JC-G1-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G1/B777-JC-G1-01.jpg"
-                                        data-description="B777-JC-G1" style="display:none">
-                                </a>
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G2/B777-JC-G2-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G2/B777-JC-G2-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/JC/B777-JC - G2/B777-JC-G2-01.jpg"
-                                        data-description="B777-JC-G2" style="display:none">
-                                </a>
-                                <!-- <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A330-340-300 premir/A330-340-300-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A330-340-300 premir/A330-340-300-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A330-340-300 premir/A330-340-300-01.jpg"
-                                        data-description="A330-340-300-FC" style="display:none">
-                                </a> -->
-                                <!-- <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A340-Suite - Viper Suite 1/A340-FC-Suite-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A340-Suite - Viper Suite 1/A340-FC-Suite-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A340-Suite - Viper Suite 1/A340-FC-Suite-01.jpg"
-                                        data-description="A340-FC-Viper Suite" style="display:none">
-                                </a> -->
-                                <!-- <a
                                     href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A380-FC- Viper Suite 2/A380-FC VS2-Suite-01.jpg">
                                     <img alt=""
                                         src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A380-FC- Viper Suite 2/A380-FC VS2-Suite-01.jpg"
                                         data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/A380-FC- Viper Suite 2/A380-FC VS2-Suite-01.jpg"
-                                        data-description="A380-FC-Viper Suite 2" style="display:none">
-                                </a> -->
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-FC- Viper Suite 2/B777-FC-Suite-01.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-FC- Viper Suite 2/B777-FC-Suite-01.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-FC- Viper Suite 2/B777-FC-Suite-01.jpg"
-                                        data-description="B777-FC-Viper Suite 2" style="display:none">
+                                        data-description="First Class - A380 Viper Suite" style="display:none">
                                 </a>
-                                <!-- <a
+                                <a
                                     href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-Skycruiser/B777-Skycruiser-01.jpg">
                                     <img alt=""
                                         src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-Skycruiser/B777-Skycruiser-01.jpg"
                                         data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/FC/B777-Skycruiser/B777-Skycruiser-01.jpg"
-                                        data-description="B777-Skycruiser" style="display:none">
-                                </a> -->
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/A380 JC.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/A380 JC.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/A380 JC.jpg"
-                                        data-description="A380 YC" style="display:none">
+                                        data-description="First Class - B777 Skycruiser" style="display:none">
                                 </a>
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 YC.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 YC.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 YC.jpg"
-                                        data-description="A380 YC" style="display:none">
-                                </a>
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 JC.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 JC.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/New/B777 JC.jpg"
-                                        data-description="A380 YC" style="display:none">
-                                </a>
-                                <a
-                                    href="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - A380.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - A380.jpg"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/All Seats/YC/YC - A380.jpg"
-                                        data-description="A380 YC" style="display:none">
-                                </a>
-                                <!-- <a href="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG">
-                                    <img alt=""
-                                        src="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG"
-                                        data-image="dist/Portfolio/Artwork and Design/Seat Demo Information/Stand.JPG"
-                                        data-description="A380 YC" style="display:none">
-                                </a> -->
+                            </div>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="new-service" role="tabpanel"
                             aria-labelledby="service-ekcellence-tab">
+                            <div class="gallery-frame">
                             <div id="gallery-se" style="display:none;">
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/1.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/1.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/1.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/1.jpg"
                                         data-image="" data-description="Female" style="display:none">
                                 </a>
 
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/2.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/2.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/2.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/2.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/2.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/2.jpg"
                                         data-description="Those are peppers" style="display:none">
                                 </a>
 
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/3.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/3.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/3.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/3.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/3.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/3.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/4.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/4.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/4.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/4.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/4.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/4.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/5.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/5.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/5.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/5.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/5.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/5.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/8.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/8.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/8.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/8.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/8.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/8.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/9.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/9.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/9.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/9.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/9.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/9.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/10.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/10.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/10.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/10.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/10.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/10.jpg"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/11.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/11.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/11.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/11.jpg"
-                                        data-description="" style="display:none">
-                                </a>
-
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/13.jpg">
-                                    <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/13.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/13.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/11.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/11.jpg"
                                         data-description="" style="display:none">
                                 </a>
 
-                                <a href="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/15.jpg">
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/13.jpg">
                                     <img alt=""
-                                        src="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/15.jpg"
-                                        data-image="dist/Portfolio/Inhouse_Photoshoots/Onboard_Service_YC/15.jpg"
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/13.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/13.jpg"
+                                        data-description="" style="display:none">
+                                </a>
+
+                                <a href="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/15.jpg">
+                                    <img alt=""
+                                        src="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/15.jpg"
+                                        data-image="dist/Portfolio/Inhouse_Photoshoots-Onboard_Service/YC-New_Service/15.jpg"
                                         data-description="" style="display:none">
                                 </a>
                             </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="aboverview" role="tabpanel" aria-labelledby="aboverview-tab">
+                            <div class="gallery-frame">
                             <div id="gallery-abov" style="display:none;">
                                 <a
                                     href="dist/Portfolio/Artwork and Design/Abinitio Training Overview/Concept Artwork.jpg">
@@ -372,53 +376,54 @@
                                         data-description="" style="display:none">
                                 </a>
                             </div>
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="service-ekcellence" role="tabpanel"
                             aria-labelledby="new-service-tab">
+                            <div class="gallery-frame">
                             <div id="gallery-yc" style="display:none;">
-                                <a href="dist/Portfolio/Web development/Photos/stand1.JPG">
-                                    <img alt="" src="dist/Portfolio/Web development/Photos/stand1.JPG"
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/stand1.JPG">
+                                    <img alt="" src="dist/Portfolio/Web development - Touchscreen/Photos/stand1.JPG"
                                         data-image="" data-description="Female" style="display:none">
                                 </a>
 
-                                <a href="dist/Portfolio/Web development/Photos/stand2.JPG">
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/stand2.JPG">
                                     <img alt=""
-                                        src="dist/Portfolio/Web development/Photos/stand2.JPG"
-                                        data-image="dist/Portfolio/Web development/Photos/stand2.JPG"
+                                        src="dist/Portfolio/Web development - Touchscreen/Photos/stand2.JPG"
+                                        data-image="dist/Portfolio/Web development - Touchscreen/Photos/stand2.JPG"
                                         data-description="" style="display:none">
                                 </a>
 
-                                <a href="dist/Portfolio/Web development/Photos/stand3.JPG">
-                                    <img alt="" src="dist/Portfolio/Web development/Photos/stand3.JPG"
-                                        data-image="dist/Portfolio/Web development/Photos/stand3.JPG"
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/stand3.JPG">
+                                    <img alt="" src="dist/Portfolio/Web development - Touchscreen/Photos/stand3.JPG"
+                                        data-image="dist/Portfolio/Web development - Touchscreen/Photos/stand3.JPG"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Web development/Photos/stand4.JPG">
-                                    <img alt="" src="dist/Portfolio/Web development/Photos/stand4.JPG"
-                                        data-image="dist/Portfolio/Web development/Photos/stand4.JPG"
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/stand4.JPG">
+                                    <img alt="" src="dist/Portfolio/Web development - Touchscreen/Photos/stand4.JPG"
+                                        data-image="dist/Portfolio/Web development - Touchscreen/Photos/stand4.JPG"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Web development/Photos/IMG_3325.JPG">
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3325.JPG">
                                     <img alt=""
-                                        src="dist/Portfolio/Web development/Photos/IMG_3325.JPG"
-                                        data-image="dist/Portfolio/Web development/Photos/IMG_3325.JPG"
+                                        src="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3325.JPG"
+                                        data-image="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3325.JPG"
                                         data-description="" style="display:none">
                                 </a>
-                                <a href="dist/Portfolio/Web development/Photos/IMG_3329.JPG">
+                                <a href="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3329.JPG">
                                     <img alt=""
-                                        src="dist/Portfolio/Web development/Photos/IMG_3329.JPG"
-                                        data-image="dist/Portfolio/Web development/Photos/IMG_3329.JPG"
+                                        src="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3329.JPG"
+                                        data-image="dist/Portfolio/Web development - Touchscreen/Photos/IMG_3329.JPG"
                                         data-description="" style="display:none">
                                 </a>
+                            </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="roster" role="tabpanel"
                             aria-labelledby="roster-tab">
-                            <br>
-                            <p><b>Note: </b>Developed automatic training schedule systems to improve strategic planning process and monthly training demand using
-                                MS Excel & VBA. This improved from two employees working on an average of 20-30 hours to less than 5 mins.</p>
-                            <div id="gallery-roster" style="display:none;">                                
+                            <div class="gallery-frame">
+                            <div id="gallery-roster" style="display:none;">
                                 <a href="dist/Portfolio/Course Management Templates/Roster - Manpower Planning/ncc.jpg">
                                     <img alt="" src="dist/Portfolio/Course Management Templates/Roster - Manpower Planning/ncc.jpg"
                                         data-image="" data-description="" style="display:none">
@@ -431,362 +436,255 @@
                                         data-description="" style="display:none">
                                 </a>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <a class="anchor" id="videos"></a>
                 <div class="wrapper">
-                    <div>
-                        <h3 class="p-3 mb-2 bg-dark text-white">Videos Produced - 9 Videos in playlist</h3>
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Watch Now</span>
+                        <h2 class="section-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.2 8.8l5.4 3.2-5.4 3.2V8.8z" fill="currentColor" stroke="none"/></svg>Videos Produced</h2>
+                        <hr class="section-rule">
                     </div>
-                <div>
-                    <iframe width="1110" height="630" src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLbrodZzHld8ssPRNk6tCTYYQ5-_LHVcks" class="embed-responsive" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <div class="wrapper-video">
+                        <div class="watch-module" id="watch-playlist">
+                            <div class="watch-player">
+                                <iframe class="watch-iframe" id="watch-iframe"
+                                    src="https://www.youtube.com/embed/seSQHEuemoI?rel=0"
+                                    title="Success Stories"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="watch-sidebar">
+                                <button class="watch-item active" type="button" data-video="seSQHEuemoI"
+                                    data-title="Success Stories" data-category="Service EKcellence Programme"
+                                    data-desc="Real customer service success stories shared to inspire best-practice behaviours across the cabin crew community.">
+                                    <span class="watch-thumb-wrap"><img class="watch-thumb" src="https://img.youtube.com/vi/seSQHEuemoI/hqdefault.jpg" alt="Success Stories"><span class="watch-play"></span></span>
+                                    <span class="watch-item-title">Success Stories</span>
+                                </button>
+                                <button class="watch-item" type="button" data-video="16QLrZK2UwA"
+                                    data-title="Manual Operations: A380 - FC Suite" data-category="Cabin Systems"
+                                    data-desc="Manual operation guide for the A380 First Class Suite seat system, for use when automated controls are unavailable.">
+                                    <span class="watch-thumb-wrap"><img class="watch-thumb" src="https://img.youtube.com/vi/16QLrZK2UwA/hqdefault.jpg" alt="Manual Operations: A380 - FC Suite"><span class="watch-play"></span></span>
+                                    <span class="watch-item-title">Manual Operations: A380 - FC Suite</span>
+                                </button>
+                                <button class="watch-item" type="button" data-video="o1T_HYITIXw"
+                                    data-title="Light Bites Service" data-category="Product Development: New Services"
+                                    data-desc="Crew training video introducing the Light Bites service concept and its delivery on board.">
+                                    <span class="watch-thumb-wrap"><img class="watch-thumb" src="https://img.youtube.com/vi/o1T_HYITIXw/hqdefault.jpg" alt="Light Bites Service"><span class="watch-play"></span></span>
+                                    <span class="watch-item-title">Light Bites Service</span>
+                                </button>
+                                <button class="watch-item" type="button" data-video="hrgKAXwMsZI"
+                                    data-title="Connecting with our Customers" data-category="Business Class: Vignettes"
+                                    data-desc="A vignette on building genuine connection with Business Class guests throughout the flight.">
+                                    <span class="watch-thumb-wrap"><img class="watch-thumb" src="https://img.youtube.com/vi/hrgKAXwMsZI/hqdefault.jpg" alt="Connecting with our Customers"><span class="watch-play"></span></span>
+                                    <span class="watch-item-title">Connecting with our Customers</span>
+                                </button>
+                                <button class="watch-item" type="button" data-video="jqJbZXyAVro"
+                                    data-title="Customer Care" data-category="First Class: Customer Care (2015)"
+                                    data-desc="Core customer care principles for the First Class cabin crew.">
+                                    <span class="watch-thumb-wrap"><img class="watch-thumb" src="https://img.youtube.com/vi/jqJbZXyAVro/hqdefault.jpg" alt="Customer Care"><span class="watch-play"></span></span>
+                                    <span class="watch-item-title">Customer Care</span>
+                                </button>
+                            </div>
+                            <div class="watch-info">
+                                <span class="eyebrow" id="watch-eyebrow">Service EKcellence Programme</span>
+                                <h3 class="watch-title" id="watch-title">Success Stories</h3>
+                                <p class="watch-desc" id="watch-desc">Real customer service success stories shared to inspire best-practice behaviours across the cabin crew community.</p>
+                                <a class="watch-yt-link" id="watch-yt-link" href="https://youtu.be/seSQHEuemoI" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              <!-- <div class="wrapper">
-                    <div>
-                        <h3 class="p-3 mb-2 bg-dark text-white">Videos Produced</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="wrapper-video">
-                                <h4>Service EKcellence Programme: 3 Videos</h4>
-                                <hr>
-                                <div id="gallery0" style="display:none;">
-                                    <img alt="Success Stories" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/1.Customer_Service-Success_Stories/image1.jpg"
-                                        data-videomp4="dist/Portfolio/Videos_Created/1.Customer_Service-Success_Stories/Success_stories.mp4">
 
-                                    <img alt="Opening a Champagne Bottle" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/3. Champagne Video/opening_champagne.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/3. Champagne Video/opening_champagne.mp4">
-
-                                    <img alt="Opening a Wine Bottle" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/4. Wine Video/opening_wine.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/4. Wine Video/opening_wine.mp4">
-                                </div>
-                            </div>
-                        </div>
-                      
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="wrapper-video">
-                                <h4>Cabin Systems</h4>
-                                <hr>
-                                <div id="gallery1" style="display:none;">
-                                    <img alt="Manual Operations: A380 - FC Suite" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/A380_FC_Suite.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/A380_FC_Suite.mp4">
-
-                                    <img alt="Manual Operations: A380 - JC Seat V2" src="" class="embed-responsive-item"
-                                        data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/A380_JC_Seat_V2.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/A380_JC_Seat_V2.mp4">
-
-                                    <img alt="Manual Operations: B777 - JC Seat" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/B777_JC_Seat.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/2. Cabin Systems - Seat Operations/B777_JC_Seat.mp4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrapper-video">
-                                <h4>Product Development: New Services</h4>
-                                <hr>
-                                <div id="gallery2" style="display:none;">
-                                    <img alt="Light Bites Service" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/5. Product Development Videos/lightbites_service.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/5. Product Development Videos/lightbites_service.mp4">
-
-                                    <img alt="Short Haul Snack Service" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/5. Product Development Videos/shorthaul_snackservice.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/5. Product Development Videos/shorthaul_snackservice.mp4">
-
-                                    <img alt="Snackbar Service" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/5. Product Development Videos/snackbar_service.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/5. Product Development Videos/snackbar_service.mp4">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="wrapper-video">
-                                <h4>Business Class: Vignettes</h4>
-                                <hr>
-                                <div id="gallery3" style="display:none;">
-                                    <img alt="Connecting with our Customers" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/6. Business Class - Vignette/Connecting with our customers.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/6. Business Class - Vignette/Connecting with our customers.mp4">
-
-                                    <img alt="Creating a lasting Impression" src="" class="embed-responsive-item"
-                                        data-type="html5video"
-                                        data-image="Dist/Portfolio/Videos_Created/6. Business Class - Vignette/Creating a lasting Impression.png"
-                                        data-videomp4="Dist/Portfolio/Videos_Created/6. Business Class - Vignette/Creating a lasting Impression.mp4">
-
-                                    <img alt="Seat refreshing" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/6. Business Class - Vignette/Seat refreshing.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/6. Business Class - Vignette/Seat refreshing.mp4">
-                                    <img alt="Welcoming Customers" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/6. Business Class - Vignette/welcoming customers who prefer less interaction.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/6. Business Class - Vignette/welcoming customers who prefer less interaction.mp4">
-                                    <img alt="Skywards Frequent Flyers" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/6. Business Class - Vignette/welcoming our Skywards frequent travelers.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/6. Business Class - Vignette/welcoming our Skywards frequent travelers.mp4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrapper-video">
-                                <h4>First Class: Customer Care</h4>
-                                <hr>
-                                <div id="gallery4" style="display:none;">
-                                    <img alt="Team Talk on Ground" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/1. Team Talk on Ground.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/1. Team Talk on Ground.mp4">
-
-                                    <img alt="Work Quietly, Speak Softly" src="" data-type="html5video"
-                                        class="embed-responsive-item"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/2. Work Quietly, Speak Softly.png"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/2. Work Quietly, Speak Softly.mp4">
-                                    <img alt="Customer Care" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/3. Customer Care.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/3. Customer Care.mp4">
-                                    <img alt="Crew initiative" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/4. Crew initiative.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/4. Crew initiative.mp4">
-
-                                    <img alt="Tidy & Replenish Suite" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/5. Tidy & Replenish Suite.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/5. Tidy & Replenish Suite.mp4">
-                                    <img alt="Last Minute Requests" src="" data-type="html5video"
-                                        data-image="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/6. Last Minute Requests.png"
-                                        class="embed-responsive-item"
-                                        data-videomp4="dist/Portfolio/Videos_Created/7. First Class Videos - 2015/6. Last Minute Requests.mp4">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <a class="anchor" id="artwork"></a>
                 <div class="wrapper">
-                    <div>
-                        <h3 class="p-3 mb-2 bg-dark text-white">Document Designed</h3>
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Documentation</span>
+                        <h2 class="section-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Manuals, Guides &amp; Presentations</h2>
+                        <hr class="section-rule">
                     </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist"
-                                aria-orientation="vertical">
-                                <p class="h5 wrapper">Service Manual</p>
-                                <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#cj" role="tab"
-                                    aria-controls="nav-home" aria-selected="true">Customer Journey</a>
-                                <!-- <a class="nav-link" id="nav-home-tab" data-toggle="tab" href="#ccp" role="tab"
-                                    aria-controls="nav-home" aria-selected="true">Crew Portal Manual</a> -->
-                                <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#inflightretail"
-                                    role="tab" aria-controls="nav-profile" aria-selected="false">Inflight Retail</a>
-                                    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#roadmap" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">Road Map</a>
-                                <br>
-                               <!--  <p class="h5">Other Designs</p>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#qrg" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">QRG - Inflight Retail</a>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#mealorder" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">Meal Order Guide</a>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#flexidining"
-                                    role="tab" aria-controls="nav-contact" aria-selected="false">Flexidining</a> -->
-                                
-                                <br>
-                                <p class="h5">Presentations</p>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#abrd" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">Ab initio Redesign</a>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#fn" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">Flash News</a>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#jcoverview" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">JC Overview</a>
-                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#ccm" role="tab"
-                                    aria-controls="nav-contact" aria-selected="false">CCM Workshop</a>
-
+                    <div class="doc-grid">
+                        <a class="doc-card reveal" href="dist/Portfolio/Artwork and Design/Service Manual/7. Customer Journey.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/cj-thumb.png" alt="Customer Journey preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Service Manual</span>
+                                <h3 class="doc-card-title">Customer Journey</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
                             </div>
-                        </div>
-                        <div class="col-9">
-                            <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="cj" role="tabpanel"
-                                    aria-labelledby="nav-home-tab">
-                                    <embed
-                                        src="dist/Portfolio/Presentations/7. Customer Journey.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Presentations/7. Customer Journey.pdf" target="_blank">Customer Journey</a>
-                                </div>
-                                <!-- <div class="tab-pane fade" id="ccp" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <embed
-                                        src="dist/Portfolio/Artwork and Design/Service Manual/16.1 Cabin Crew Portal.pdf"
-                                        class="pdf-container" frameborder="0" />
-                                </div> -->
-                                <div class="tab-pane fade" id="inflightretail" role="tabpanel"
-                                    aria-labelledby="nav-home-tab">
-                                    <embed src="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail.pdf" target="_blank">Inflight Retail</a>
-                                </div>
-                                <div class="tab-pane fade" id="qrg" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                    <embed
-                                        src="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail-QRG.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail-QRG.pdf" target="_blank">Inflight Retail-QRG</a>
-                                </div>
-                                <div class="tab-pane fade" id="mealorder" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">
-                                    <embed
-                                        src="dist/Portfolio/Artwork and Design/Meal Order Guide/Current Design - Meal Order Guide V3.2.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Artwork and Design/Meal Order Guide/Current Design - Meal Order Guide V3.2.pdf" target="_blank">Meal Order Guide</a>
-                                </div>
-                                <div class="tab-pane fade" id="flexidining" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">
-                                    <embed src="dist/Portfolio/Artwork and Design/Flexidining/Dine On Your Time.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Artwork and Design/Flexidining/Dine On Your Time.pdf" target="_blank">Dine On Your Time</a>
-                                </div>
-                                <div class="tab-pane fade" id="roadmap" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">
-                                    <embed
-                                        src="dist/Portfolio/Artwork and Design/Cabin Crew Development Plans - Road Maps/YC Road Map.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Artwork and Design/Cabin Crew Development Plans - Road Maps/YC Road Map.pdf" target="_blank">Road Map</a>
-                                </div>
-                                <div class="tab-pane fade" id="abrd" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    <embed src="dist/Portfolio/Presentations/Ab initio Redesign.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1"
-                                        class="pdf-container" frameborder="0" />
-                                        <a href="dist/Portfolio/Presentations/Ab initio Redesign.pdf" target="_blank">Abinitio Redesign</a>
-                                </div>
-                                <div class="tab-pane fade" id="fn" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    <embed src="dist/Portfolio/Presentations/Flash News.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1" class="pdf-container"
-                                        frameborder="0" />
-                                        <a href="dist/Portfolio/Presentations/Flash News.pdf" target="_blank">Flash News</a>
-                                </div>
-                                <div class="tab-pane fade" id="jcoverview" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">
-                                    <embed src="dist/Portfolio/Presentations/JC Overview.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1" class="pdf-container"
-                                        frameborder="0" />
-                                        <a href="dist/Portfolio/Presentations/JC Overview.pdf" target="_blank">JC Overview</a>
-                                </div>
-                                <div class="tab-pane fade" id="ccm" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    <embed src="dist/Portfolio/Presentations/YC CCM Workshop.pdf#view=FitH&#toolbar=1&scrollbar=1&navpanes=1" class="pdf-container"
-                                        frameborder="0" />
-                                        <a href="dist/Portfolio/Presentations/YC CCM Workshop.pdf" target="_blank">CCM Workshop</a>
-                                </div>
+                        </a>
+                        <a class="doc-card reveal reveal-1" href="dist/Portfolio/Artwork and Design/Service Manual/16.1 Cabin Crew Portal.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/ccp-thumb.png" alt="Crew Portal Manual preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Service Manual</span>
+                                <h3 class="doc-card-title">Crew Portal Manual</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
                             </div>
-                        </div>
+                        </a>
+                        <a class="doc-card reveal reveal-2" href="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/inflightretail-thumb.png" alt="Inflight Retail preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Service Manual</span>
+                                <h3 class="doc-card-title">Inflight Retail</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal" href="dist/Portfolio/Artwork and Design/Service Manual/Inflight Retail-QRG.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/qrg-thumb.png" alt="QRG - Inflight Retail preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Quick Reference</span>
+                                <h3 class="doc-card-title">QRG &ndash; Inflight Retail</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal reveal-1" href="dist/Portfolio/Artwork and Design/Meal Order Guide/Current Design - Meal Order Guide V3.2.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/mealorder-thumb.png" alt="Meal Order Guide preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Guide</span>
+                                <h3 class="doc-card-title">Meal Order Guide</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal reveal-2" href="dist/Portfolio/Artwork and Design/Flexidining/Dine On Your Time.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/flexidining-thumb.png" alt="Flexidining preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Guide</span>
+                                <h3 class="doc-card-title">Flexidining</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal" href="dist/Portfolio/Artwork and Design/Cabin Crew Development Plans - Road Maps/YC Road Map.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/roadmap-thumb.png" alt="Road Map preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Development</span>
+                                <h3 class="doc-card-title">Road Map</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal reveal-1" href="dist/Portfolio/Presentations/Ab initio Redesign.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/abrd-thumb.png" alt="Ab initio Redesign preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Presentation</span>
+                                <h3 class="doc-card-title">Ab initio Redesign</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal reveal-2" href="dist/Portfolio/Presentations/Flash News.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/fn-thumb.png" alt="Flash News preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Presentation</span>
+                                <h3 class="doc-card-title">Flash News</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal" href="dist/Portfolio/Presentations/JC Overview.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/jcoverview-thumb.png" alt="JC Overview preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Presentation</span>
+                                <h3 class="doc-card-title">JC Overview</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
+                        <a class="doc-card reveal reveal-1" href="dist/Portfolio/Presentations/YC CCM Workshop.pdf" target="_blank">
+                            <div class="doc-card-thumb"><img src="dist/img/doc-thumbs/ccm-thumb.png" alt="CCM Workshop preview"></div>
+                            <div class="doc-card-body">
+                                <span class="doc-card-tag">Presentation</span>
+                                <h3 class="doc-card-title">CCM Workshop</h3>
+                                <span class="doc-card-open">Open PDF &#8599;</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <a class="anchor" id="web"></a>
-               
+
             </div> <!-- container -->
         </main>
-        <footer>
+
+        <div class="cta">
+            <div class="container cta-inner" style="background:none;">
+                <span class="eyebrow cta-eyebrow">Let's Talk</span>
+                <h2 class="cta-title">Have a training or content project in mind?</h2>
+                <p class="cta-sub">Always happy to talk design, video production, or digital learning content.</p>
+                <div class="cta-links">
+                    <a href="mailto:marvin.castelino@gmail.com">Email Me</a>
+                    <a href="#videos">See the Work</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container" style="background:none;">
+                <div class="footer-name">Marvin Castelino</div>
+                <div class="footer-tagline">Instructional design, video production &amp; digital learning content.</div>
+                <a class="footer-email" href="mailto:marvin.castelino@gmail.com">marvin.castelino@gmail.com</a>
+                <div class="footer-meta">&copy; <span id="footer-year"></span> Marvin Castelino</div>
+            </div>
         </footer>
 
-        <!-- /container -->
+        <script src="dist/js/bootstrap.js"></script>
 
-
-
-        <script src="dist/js/bootstrap.js"></script>2        
-        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-        <!-- <script>
-            $(function () {
-                $('#myModal').modal({
-                    show: false
-                }).on('hidden.bs.modal', function () {
-                    $(this).find('video')[0].pause();
-                });
-                $('#myModal1').modal({
-                    show: false
-                }).on('hidden.bs.modal', function () {
-                    $(this).find('video')[0].pause();
-                });
-                $(".modal-backdrop, #myModal .close, #myModal .btn").live("click", function () {
-                    $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+        <!-- watch-now playlist: swap the featured YouTube embed from sidebar clicks -->
+        <script type="text/javascript">
+            document.querySelectorAll('.watch-module').forEach(function (module) {
+                var iframe = module.querySelector('.watch-iframe');
+                var titleEl = module.querySelector('.watch-title');
+                var descEl = module.querySelector('.watch-desc');
+                var eyebrowEl = module.querySelector('#watch-eyebrow') || module.querySelector('.watch-info .eyebrow');
+                var ytLink = module.querySelector('.watch-yt-link');
+                if (!iframe) return;
+                module.querySelectorAll('.watch-item').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        module.querySelectorAll('.watch-item').forEach(function (b) { b.classList.remove('active'); });
+                        btn.classList.add('active');
+                        var id = btn.getAttribute('data-video');
+                        iframe.src = 'https://www.youtube.com/embed/' + id + '?rel=0&autoplay=1';
+                        iframe.title = btn.getAttribute('data-title');
+                        titleEl.textContent = btn.getAttribute('data-title');
+                        descEl.textContent = btn.getAttribute('data-desc');
+                        if (eyebrowEl) eyebrowEl.textContent = btn.getAttribute('data-category');
+                        if (ytLink) ytLink.href = 'https://youtu.be/' + id;
+                        btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    });
                 });
             });
+        </script>
 
-        </script> -->
-        <!-- script to pause and play another video -->
         <script type="text/javascript">
-            window.addEventListener('load', function (event) {
-                document.querySelectorAll(".embed-responsive-item").forEach((el) => {
-                    el.onplay = function (e) {
-                        // pause all the videos except the current.
-                        document.querySelectorAll(".embed-responsive-item").forEach((el1) => {
-                            if (el === el1)
-                                el1.play();
-                            else
-                                el1.pause();
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- scroll reveal -->
+        <script type="text/javascript">
+            (function () {
+                var revealEls = document.querySelectorAll('.reveal');
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                io.unobserve(entry.target);
+                            }
                         });
-                    }
-                });
-            });
-        </script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                centeredSlides: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
+                    }, { threshold: 0.15 });
+                    revealEls.forEach(function (el) { io.observe(el); });
+                } else {
+                    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+                }
+            })();
         </script>
 
         <script type="text/javascript">
-
             $(document).ready(function () {
-                $("#gallery0").unitegallery({
-                    theme_skin: "right-title-only",
-                });
-                $("#gallery1").unitegallery({
-                    theme_skin: "right-title-only",
-                });
-                $("#gallery2").unitegallery({
-                    theme_skin: "right-title-only",
-                });
-                $("#gallery3").unitegallery({
-                    theme_skin: "right-title-only",
-                });
-                $("#gallery4").unitegallery({
-                    theme_skin: "right-title-only",
-                });
                 $("#gallery-sg").unitegallery({
                     gallery_theme: "tiles",
                 });
                 $("#gallery-yc").unitegallery({
                     gallery_theme: "tiles",
                     gallery_autoplay: false,
-                    gallery_width: 1300,							//gallery width		
-                    gallery_height: 500,							//gallery height
+                    gallery_width: 1300,
+                    gallery_height: 500,
                 });
                 $("#gallery-se").unitegallery({
                     gallery_theme: "tiles",
@@ -797,9 +695,7 @@
                 $("#gallery-roster").unitegallery({
                     gallery_theme: "tiles",
                 });
-
             });
-
         </script>
         <script>
             $(document).ready(function () {
@@ -810,75 +706,9 @@
                 $('nav .navbar-brand').click(function () {
                     $('nav .nav-item').removeClass("active");
                 });
-
             });
         </script>
+    </div>
 </body>
 
 </html>
-
-
-
-<!-- Button trigger modal
-                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
-                            Customer Service - Success Stories
-                        </button>
-
-                        Modal
-                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class=" modal-dialog modal-lg modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Customer Service - Success
-                                            Stories</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <video id="vid_frame1" controls>
-                                            <source
-                                                src="dist/Portfolio/Videos_Created/1.Customer_Service-Success_Stories/Success_stories.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        Button trigger modal
-                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal1">
-                            Opening a Champagne Bottle
-                        </button>
-
-                        Modal
-                        <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class=" modal-dialog modal-lg modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Opening a Champagne Bottle</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <video id="vid_frame2" controls>
-                                            <source
-                                                src="dist/Portfolio/Videos_Created/3. Champagne Video/opening_champagne.mp4"
-                                                type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
