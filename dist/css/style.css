@@ -466,6 +466,7 @@ a:hover { color: var(--amber); }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 170px);
+  grid-auto-rows: 170px;
   gap: 16px;
 }
 
@@ -496,7 +497,7 @@ a:hover { color: var(--amber); }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at var(--mx, 85%) var(--my, 15%), rgba(255,51,85,.22), transparent 55%);
+  background: radial-gradient(circle at 85% 15%, rgba(255,51,85,.18), transparent 55%);
   opacity: 0;
   transition: opacity .25s ease;
 }
