@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Metro, a sleek, intuitive, and powerful framework for faster and easier web development for Windows Metro Style.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development">
+    <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
+
+    <link rel='shortcut icon' type='image/x-icon' href='dist/images/jc.ico' />
+    <title>Business Class</title>
+    
+
+    <link href="dist/css/metro.css" rel="stylesheet">
+    <!--<link href="dist/css/metro-icons.css" rel="stylesheet">-->
+    <link href="dist/css/metro-responsive.css" rel="stylesheet">    
+    <script src="dist/js/jquery-2.1.3.min.js"></script>
+    <script src="dist/js/metro.js"></script>    
+    <!--<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+
+    <style>
+        
+        .tile-area-controls {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+            
+        }
+
+        .tile-group {
+            left: 100px;
+        }
+
+        .tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+            
+        }
+
+        /*#charmSettings .button {
+            margin: 5px;
+        }
+
+        .schemeButtons {
+            width: 300px;
+        }*/
+
+        @media screen and (max-width: 640px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+            .tile-area-controls {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+
+        }
+    </style>
+
+    <script>
+        (function($) {
+            $.StartScreen = function(){
+                var plugin = this;
+                var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+                plugin.init = function(){
+                    setTilesAreaSize();
+                    if (width > 640) addMouseWheel();
+                };
+
+                var setTilesAreaSize = function(){
+                    var groups = $(".tile-group");
+                    var tileAreaWidth = 30;
+                    $.each(groups, function(i, t){
+                        if (width <= 640) {
+                            tileAreaWidth = width;
+                        } else {
+                            tileAreaWidth += $(t).outerWidth() + 30;
+                        }
+                    });
+                    $(".tile-area").css({
+                        width: tileAreaWidth
+                    });
+                };
+
+                var addMouseWheel = function (){
+                    $("body").mousewheel(function(event, delta, deltaX, deltaY){
+                        var page = $(document);
+                        var scroll_value = delta * 50;
+                        page.scrollLeft(page.scrollLeft() - scroll_value);
+                        return false;
+                    });
+                };
+
+                plugin.init();
+            }
+        })(jQuery);
+
+        $(function(){
+            $.StartScreen();
+
+            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super");
+
+            $.each(tiles, function(){
+                var tile = $(this);
+                setTimeout(function(){
+                    tile.css({
+                        opacity: 1,
+                        "-webkit-transform": "scale(1)",
+                        "transform": "scale(1)",
+                        "-webkit-transition": ".3s",
+                        "transition": ".3s"
+                    });
+                }, Math.floor(Math.random()*500));
+            });
+
+            $(".tile-group").animate({
+                left: 0
+            });
+        });
+
+        // function showCharms(id){
+        //     var  charm = $(id).data("charm");
+        //     if (charm.element.data("opened") === true) {
+        //         charm.close();
+        //     } else {
+        //         charm.open();
+        //     }
+        // }
+
+        function setSearchPlace(el){
+            var a = $(el);
+            var text = a.text();
+            var toggle = a.parents('label').children('.dropdown-toggle');
+
+            toggle.text(text);
+        }
+
+        $(function(){
+            var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
+            $(".tile-area").removeClass (function (index, css) {
+                return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+            }).addClass(current_tile_area_scheme);
+
+            $(".schemeButtons .button").hover(
+                    function(){
+                        var b = $(this);
+                        var scheme = "tile-area-scheme-" +  b.data('scheme');
+                        $(".tile-area").removeClass (function (index, css) {
+                            return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                        }).addClass(scheme);
+                    },
+                    function(){
+                        $(".tile-area").removeClass (function (index, css) {
+                            return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                        }).addClass(current_tile_area_scheme);
+                    }
+            );
+
+            $(".schemeButtons .button").on("click", function(){
+                var b = $(this);
+                var scheme = "tile-area-scheme-" +  b.data('scheme');
+
+                $(".tile-area").removeClass (function (index, css) {
+                    return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                }).addClass(scheme);
+
+                current_tile_area_scheme = scheme;
+                localStorage.setItem('tile-area-scheme', scheme);
+
+                showSettings();
+            });       
+        });
+     </script>
+
+</head>
+<body style="overflow-y: hidden; background: linear-gradient(135deg, rgb(33,69,135),rgb(33,69,135)50%, rgb(24,28,58)); background-color:rgb(18,41,94)">    
+      <div class="container"> 
+        <div class="tile-area ">
+           <img src="dist/images/main/Taglines_1.png" width=208px height=88px>
+        <div class="tile-group single">
+            <span class="tile-group-title"></span>
+            <div class="tile-container">
+                <div class="tile-super" data-role="tile" >
+                    <div class="tile-content">
+                        <a href=""><img src="dist/images/main/Picture1.jpg" data-role="fitImage" data-format="fill"></a>                   
+                    </div>
+                    <div class="tile-label"></div>
+                </div>
+                <div class="tile bg-opwhite fg-white" data-role="tile" data-role="tile" data-effect="slideUpDown">
+                    <div class="tile-content iconic">
+                       <a href="videos.html#collapseZero" class="live-slide"><img src="dist/images/main/9.png" data-role="fitImage" data-format="fill"></a></div>
+                    <div class="tile-label">Welcome</div>
+                </div>
+                <div class="tile bg-opwhite fg-white" data-role="tile" data-role="tile" data-effect="slideUpDown">
+                    <div class="tile-content iconic">
+                       <a href="serviceflows.html" class="live-slide"><img src="dist/images/main/serviceflows.jpg" data-role="fitImage" data-format="fill"></a></div>
+                    <div class="tile-label">Service Flows</div>
+                </div>
+                <div class="tile-wide bg-opwhite fg-white" data-role="tile" data-role="tile" data-effect="slideUpDown">
+                    <div class="tile-content iconic">
+                        <a href="tray.html" class="live-slide"><img src="dist/images/main/traysetups.jpg" data-role="fitImage" data-format="fill"></a> 
+                    </div>
+                    <div class="tile-label">Tray Setups</div>
+                </div>                              
+                <div class="tile bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <a href="serviceflows.html#collapseOne"><img src="dist/images/main/1.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Service Flows - Category 1</span></a>
+                    </div>
+                </div>
+                <div class="tile bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <a href="serviceflows.html#collapseTwo"><img src="dist/images/main/2.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Service Flows - Category 2</span></a>
+                    </div>
+                </div>
+                <div class="tile bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <a href="serviceflows.html#collapseThree"><img src="dist/images/main/3.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Service Flows - Category 3</span></a>
+                    </div>
+                </div>
+                  
+                <div>
+                <div class="tile bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                       <a href="serviceflows.html#collapseFour"><img src="dist/images/main/4.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label" >Service Flows - Category 4/5</span></a>
+                    </div>
+                </div>
+                <div class="tile-wide bg-opwhite fg-white" data-role="tile">
+                        <div class="tile-content iconic icon"> 
+                            <a href="videos.html#collapseOne"><img src="dist/images/main/champagne.jpg" data-role="fitImage" data-format="fill">
+                            <div class="tile-label">Opening Champagne</div></a>
+                        </div>
+                    </div> 
+             
+       <div class="tile-wide bg-opwhite fg-white" data-role="tile">
+                    <div class="tile-content">
+                         <a href="videos.html#collapseTwo"><img src="dist/images/main/wine.jpg" data-role="fitImage" data-format="fill">
+                        <div class="tile-label">Opening Wine</div></a>
+                    </div>
+                </div>
+                <div class="tile" data-role="tile" data-role="tile" data-role="tile" data-effect="slideUp" >
+                    <div class="tile-content">
+                        <a href="videos.html#collapseThree"><img src="dist/images/main/5.png" data-role="fitImage" data-format="fill">
+                        <div class="tile-label">Customer Care Vignettes</div> </a>
+                        
+                    </div>
+                </div>
+                <div class="tile bg-opwhite fg-white">
+                    <div class="tile-content iconic">
+                        <a href="videos.html#collapseFour"><img src="dist/images/main/6.png" data-role="fitImage" data-format="fill"> 
+                        <div class="tile-label">Job Accountabilities</div> </a>
+                        
+                    </div>
+                </div>
+                <a href="catering.html" class="tile bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/7.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Catering</br>Facts & Figures</span>
+                    </div>
+                </a>
+                </div>
+            <a href="rtl.html" class="tile bg-opwhite fg-white" data-role="tile">                
+                    <div class="tile-content iconic">
+                        <img src="dist/images/main/8.png" data-role="fitImage" data-format="fill">
+                        <span class="tile-label">Ready To Land - Reference Guide</span>
+                    </div>
+                </a>
+                </div>
+                          
+    </div>
+    </div>
+
+    <script src="custm.js"></script>
+</body>
+</html>
+
+
+
