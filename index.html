@@ -246,7 +246,22 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
+                        <div class="app-card reveal">
+                            <div class="app-card-img-wrap"><img src="dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.46.26 PM.png" alt="Introduction to the B777-300 ER First Class Suite"></div>
+                            <div class="app-card-body">
+                                <h5 class="app-card-title">B777<br>First Class</h5>
+                                <button type="button" class="btn btn-dark" data-lightbox="b777">View</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="lightbox-overlay" id="elearning-lightbox" aria-hidden="true">
+                    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+                    <button type="button" class="lightbox-prev" aria-label="Previous slide">&#8249;</button>
+                    <img class="lightbox-img" src="" alt="">
+                    <button type="button" class="lightbox-next" aria-label="Next slide">&#8250;</button>
+                    <span class="lightbox-counter"></span>
                 </div>
 
                 <a class="anchor" id="photo"></a>
@@ -799,6 +814,62 @@
                     $navCollapse.collapse('hide');
                 });
             });
+        </script>
+
+        <!-- E-Learning lightbox: for courses that only have screenshots, no live build -->
+        <script type="text/javascript">
+            (function () {
+                var galleries = {
+                    b777: [
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.46.26 PM.png", alt: "Course title slide" },
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.46.39 PM.png", alt: "Introduction" },
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.46.51 PM.png", alt: "Learning outcomes" },
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.47.15 PM.png", alt: "B777 cabin configuration" },
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.48.09 PM.png", alt: "Front section features" },
+                        { src: "dist/Portfolio/elearning/Introduction to the B777-300 ER First Class Suite/Screenshot 2026-07-23 at 8.50.20 PM.png", alt: "Course details" }
+                    ]
+                };
+                var overlay = document.getElementById('elearning-lightbox');
+                if (!overlay) return;
+                var imgEl = overlay.querySelector('.lightbox-img');
+                var counterEl = overlay.querySelector('.lightbox-counter');
+                var currentSet = [];
+                var idx = 0;
+
+                function show(i) {
+                    idx = (i + currentSet.length) % currentSet.length;
+                    imgEl.src = currentSet[idx].src;
+                    imgEl.alt = currentSet[idx].alt;
+                    counterEl.textContent = (idx + 1) + ' / ' + currentSet.length;
+                }
+                function openLightbox(setName) {
+                    currentSet = galleries[setName] || [];
+                    if (!currentSet.length) return;
+                    show(0);
+                    overlay.classList.add('is-open');
+                    overlay.setAttribute('aria-hidden', 'false');
+                }
+                function closeLightbox() {
+                    overlay.classList.remove('is-open');
+                    overlay.setAttribute('aria-hidden', 'true');
+                }
+
+                document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        openLightbox(btn.getAttribute('data-lightbox'));
+                    });
+                });
+                overlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+                overlay.querySelector('.lightbox-prev').addEventListener('click', function () { show(idx - 1); });
+                overlay.querySelector('.lightbox-next').addEventListener('click', function () { show(idx + 1); });
+                overlay.addEventListener('click', function (e) { if (e.target === overlay) closeLightbox(); });
+                document.addEventListener('keydown', function (e) {
+                    if (!overlay.classList.contains('is-open')) return;
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') show(idx - 1);
+                    if (e.key === 'ArrowRight') show(idx + 1);
+                });
+            })();
         </script>
 
         <!-- watch-now playlist: swap the featured YouTube embed from sidebar clicks -->
