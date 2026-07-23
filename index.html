@@ -625,6 +625,37 @@
 
         <script src="dist/js/bootstrap.js"></script>
 
+        <!-- mobile nav: auto-close on link click, scroll, or outside click -->
+        <script type="text/javascript">
+            $(function () {
+                var $navCollapse = $('#navbarSupportedContent');
+                var $toggler = $('.navbar-toggler');
+
+                $navCollapse.on('click', 'a.nav-link', function () {
+                    $navCollapse.collapse('hide');
+                });
+
+                $navCollapse.on('shown.bs.collapse', function () {
+                    $(window).on('scroll.navAutoClose', function () {
+                        $navCollapse.collapse('hide');
+                    });
+                });
+
+                $navCollapse.on('hidden.bs.collapse', function () {
+                    $(window).off('scroll.navAutoClose');
+                });
+
+                $(document).on('click touchstart', function (e) {
+                    if (!$navCollapse.hasClass('show')) return;
+                    var $target = $(e.target);
+                    if ($navCollapse.is(e.target) || $navCollapse.has(e.target).length || $toggler.is(e.target) || $toggler.has(e.target).length) {
+                        return;
+                    }
+                    $navCollapse.collapse('hide');
+                });
+            });
+        </script>
+
         <!-- watch-now playlist: swap the featured YouTube embed from sidebar clicks -->
         <script type="text/javascript">
             document.querySelectorAll('.watch-module').forEach(function (module) {
