@@ -40,13 +40,15 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   background-color: var(--bg);
   font-family: var(--font-body);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .container {
@@ -1076,11 +1078,28 @@ footer.site-footer .footer-meta {
   .hero { padding: 130px 18px 90px; min-height: auto; }
   .hero-name { font-size: 44px; }
   .hero-tagline { font-size: 15px; }
-  .section-title { font-size: 32px; }
+  .section-title {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .section-title .icon { margin-right: 10px; }
   .cta-title { font-size: 34px; }
   .container { padding-left: 18px; padding-right: 18px; }
   .hero { margin-left: -18px; margin-right: -18px; }
   .stats { margin-left: -18px; margin-right: -18px; grid-template-columns: repeat(2, 1fr); }
   .cta { margin-left: -18px; margin-right: -18px; padding: 70px 18px; }
   footer.site-footer { margin-left: -18px; margin-right: -18px; padding: 28px 18px; }
+
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs .nav-link { flex: 0 0 auto; white-space: nowrap; }
 }
