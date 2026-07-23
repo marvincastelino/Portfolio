@@ -66,22 +66,39 @@ body {
 a { color: var(--red-bright); }
 a:hover { color: var(--amber); }
 
-/* ---------- Reveal-on-scroll ---------- */
+/* ---------- Reveal-on-scroll ----------
+   Uses a keyframe animation (not a transition) so it never fights with a
+   card's own hover transition on the same property (transform). */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);
 }
 
 .reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: revealIn .7s cubic-bezier(.16,.84,.44,1) both;
 }
 
-.reveal-1 { transition-delay: .05s; }
-.reveal-2 { transition-delay: .12s; }
-.reveal-3 { transition-delay: .19s; }
-.reveal-4 { transition-delay: .26s; }
+.reveal-1.is-visible { animation-delay: .05s; }
+.reveal-2.is-visible { animation-delay: .12s; }
+.reveal-3.is-visible { animation-delay: .19s; }
+.reveal-4.is-visible { animation-delay: .26s; }
+.reveal-5.is-visible { animation-delay: .33s; }
+
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
 
 /* ---------- Top nav ---------- */
 .navbar {
@@ -90,6 +107,13 @@ a:hover { color: var(--amber); }
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   padding: 18px 32px;
+  transition: padding .3s ease, background-color .3s ease, box-shadow .3s ease;
+}
+
+.navbar.is-scrolled {
+  padding: 12px 32px;
+  background-color: rgba(8, 8, 10, 0.92) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
 .navbar-brand {
@@ -203,6 +227,26 @@ a:hover { color: var(--amber); }
   position: relative;
   z-index: 1;
   width: 100%;
+}
+
+/* Hero entrance: staggered fade-up on load, independent of scroll reveal */
+.hero .eyebrow,
+.hero-name,
+.hero-tagline,
+.hero-links,
+.hero-scroll-cue {
+  animation: heroEnter .9s cubic-bezier(.16,.84,.44,1) both;
+}
+
+.hero .eyebrow { animation-delay: .05s; }
+.hero-name { animation-delay: .16s; }
+.hero-tagline { animation-delay: .32s; }
+.hero-links { animation-delay: .46s; }
+.hero-scroll-cue { animation-delay: .62s; }
+
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero .eyebrow {
@@ -452,7 +496,7 @@ a:hover { color: var(--amber); }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(255,51,85,.18), transparent 55%);
+  background: radial-gradient(circle at var(--mx, 85%) var(--my, 15%), rgba(255,51,85,.22), transparent 55%);
   opacity: 0;
   transition: opacity .25s ease;
 }
@@ -563,6 +607,13 @@ a:hover { color: var(--amber); }
   background: linear-gradient(90deg, var(--red-bright), var(--amber));
   border: 0;
   margin: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .6s cubic-bezier(.16,.84,.44,1) .25s;
+}
+
+.section-head.is-visible .section-rule {
+  transform: scaleX(1);
 }
 
 a.anchor {

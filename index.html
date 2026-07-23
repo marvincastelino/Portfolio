@@ -150,7 +150,7 @@
                         <hr class="section-rule">
                     </div>
                     <div class="app-grid">
-                        <div class="app-card">
+                        <div class="app-card reveal">
                             <div class="app-card-img-wrap"><img src="dist/img/First Class.png" alt="First Class"></div>
                             <div class="app-card-body">
                                 <h5 class="app-card-title">First<br>Class</h5><a
@@ -158,7 +158,7 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="app-card">
+                        <div class="app-card reveal reveal-1">
                             <div class="app-card-img-wrap"><img src="dist/img/Business Class.png" alt="Business Class"></div>
                             <div class="app-card-body">
                                 <h5 class="app-card-title">Business<br>Class</h5><a
@@ -166,7 +166,7 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="app-card">
+                        <div class="app-card reveal reveal-2">
                             <div class="app-card-img-wrap"><img src="dist/img/Economy Class.png" alt="Economy Class"></div>
                             <div class="app-card-body">
                                 <h5 class="app-card-title">Economy<br>Class</h5><a
@@ -174,7 +174,7 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="app-card">
+                        <div class="app-card reveal reveal-3">
                             <div class="app-card-img-wrap"><img src="dist/img/Cabin Systems.png" alt="Cabin Systems"></div>
                             <div class="app-card-body">
                                 <h5 class="app-card-title">Cabin<br>Systems</h5><a
@@ -182,7 +182,7 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="app-card">
+                        <div class="app-card reveal">
                             <div class="app-card-img-wrap"><img src="dist/Portfolio/Web development - Touchscreen/Duty Free/dist/images/DF_BG.jpg" alt="Duty Free"></div>
                             <div class="app-card-body">
                                 <h5 class="app-card-title">Duty<br>Free</h5><a
@@ -190,7 +190,7 @@
                                     target="_blank" class="btn btn-dark">Link</a>
                             </div>
                         </div>
-                        <div class="app-card">
+                        <div class="app-card reveal reveal-1">
                             <div class="app-card-img-wrap"><img
                                 src="dist/Portfolio/Artwork and Design/Interesting Facts - Google Maps/Interesting Facts.png"
                                 alt="Interesting Facts"></div>
@@ -449,7 +449,7 @@
                         <hr class="section-rule">
                     </div>
 
-                    <div class="wrapper-video">
+                    <div class="wrapper-video reveal">
                         <div class="watch-module" id="watch-playlist">
                             <div class="watch-player">
                                 <iframe class="watch-iframe" id="watch-iframe"
@@ -703,6 +703,61 @@
                 } else {
                     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
                 }
+            })();
+        </script>
+
+        <!-- navbar scroll state + scrollspy: condense nav on scroll, highlight the current section -->
+        <script type="text/javascript">
+            (function () {
+                var navEl = document.querySelector('.navbar');
+                var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                var sections = Array.prototype.map.call(navLinks, function (link) {
+                    var id = (link.getAttribute('href') || '').replace('#', '');
+                    return { item: link.closest('.nav-item'), el: id ? document.getElementById(id) : null };
+                }).filter(function (s) { return s.el && s.item; });
+
+                var ticking = false;
+
+                function update() {
+                    if (navEl) navEl.classList.toggle('is-scrolled', window.scrollY > 40);
+
+                    if (sections.length) {
+                        var scrollPos = window.scrollY + 140;
+                        var current = sections[0];
+                        sections.forEach(function (s) {
+                            if (s.el.offsetTop <= scrollPos) current = s;
+                        });
+                        sections.forEach(function (s) {
+                            s.item.classList.toggle('active', s === current);
+                        });
+                    }
+                    ticking = false;
+                }
+
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        window.requestAnimationFrame(update);
+                        ticking = true;
+                    }
+                }, { passive: true });
+
+                update();
+            })();
+        </script>
+
+        <!-- bento cards: cursor-tracked glow -->
+        <script type="text/javascript">
+            (function () {
+                var cards = document.querySelectorAll('.bento-card');
+                cards.forEach(function (card) {
+                    card.addEventListener('mousemove', function (e) {
+                        var rect = card.getBoundingClientRect();
+                        var x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+                        var y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+                        card.style.setProperty('--mx', x + '%');
+                        card.style.setProperty('--my', y + '%');
+                    });
+                });
             })();
         </script>
 
