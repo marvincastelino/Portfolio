@@ -1,0 +1,151 @@
+/* ============================================================
+   Mobile-friendly overrides — added on top of the original 2017
+   touchscreen-kiosk build, without changing any text, images or
+   functionality. This file is linked LAST on every page so it can
+   safely win the cascade on small screens; nothing here changes
+   how the site looks on a tablet/desktop touchscreen.
+   ============================================================ */
+
+/* Universal safety net: never let images/video/iframes force the
+   page wider than the screen. */
+html, body { max-width: 100%; }
+img, video, iframe, embed, object, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+/* Bootstrap's own responsive video/iframe wrapper needs its child
+   to stay 100% height inside the aspect-ratio box. */
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive video {
+  height: 100% !important;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  html, body { overflow-x: hidden; }
+
+  /* Bootstrap navbar pages: bigger, easier-to-tap nav targets */
+  .navbar-toggle { padding: 12px 10px; }
+  .navbar-nav > li > a { padding-top: 14px; padding-bottom: 14px; }
+}
+
+/* ---- Metro tile-launcher screens (index.html / main.html) ----
+   The original tile-group widths are fixed pixel values (160px to
+   1120px) sized for a large touchscreen. On a phone, force the
+   groups to stack full-width and let tiles wrap into a simple grid
+   instead of running off the edge of the screen. */
+@media screen and (max-width: 640px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  .tile-area {
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+    padding-top: 70px !important;
+  }
+  .tile-group {
+    width: 100% !important;
+    min-width: 0 !important;
+    float: none !important;
+    margin-left: 0 !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+  }
+  .tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tile, .tile-small, .tile-sqaure {
+    width: 45% !important;
+    height: 130px !important;
+    margin: 2.5% !important;
+  }
+  .tile-wide, .tile-large, .tile-big, .tile-super {
+    width: 95% !important;
+    height: 150px !important;
+    margin: 2.5% !important;
+  }
+}
+
+/* ---- Horizontal video filmstrip (dist/css/mod.css: .vid-list) ----
+   Swap the arrow-only horizontal scroller for native touch
+   scrolling, and hide the arrow buttons — they sit 25px outside the
+   filmstrip's own box (by design, for a mouse), which on a phone
+   pokes past the edge of the screen and causes sideways scrolling
+   of the whole page. */
+@media screen and (max-width: 767px) {
+  .vid-list-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .arrow-left, .arrow-right {
+    display: none !important;
+  }
+}
+
+/* ---- Full-bleed Swiper "parallax" slides (e.g. dod.html) ----
+   The desktop template pads every slide 100px/200px, which leaves
+   almost no room on a phone, and Swiper clips overflow by default
+   so a tall slide gets cut off with no way to reach the rest of it.
+   Shrink the padding and let a slide scroll internally when its
+   content is taller than the screen. */
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    padding: 90px 16px 40px 16px !important;
+    height: auto !important;
+    min-height: 100%;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ---- Duty Free flip cards (.info-card) ----
+   These flip on :hover, which doesn't exist on a touchscreen or a
+   phone — meaning every FAQ answer on the back of a card is
+   currently unreachable on mobile. A small script (added in
+   index.html) toggles this same "is-flipped" class on tap, so the
+   exact same content becomes reachable by touch too. */
+.info-card.is-flipped .back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+.info-card.is-flipped .front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* The originals only set -webkit-transform (Safari-only kiosk
+   build) — add the standard property too so the tap-to-flip also
+   works in non-WebKit mobile browsers. */
+.front, .back {
+  transition: transform 1s, -webkit-transform 1s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.info-card:hover .back,
+.info-card.is-flipped .back {
+  transform: rotateY(0);
+}
+.info-card:hover .front,
+.info-card.is-flipped .front {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 600px) {
+  html { height: auto; min-height: 100%; }
+  .info-card {
+    float: none;
+    width: 90%;
+    max-width: 320px;
+    margin: 10px auto;
+  }
+  .front, .back {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+  .back { overflow-y: auto; }
+}

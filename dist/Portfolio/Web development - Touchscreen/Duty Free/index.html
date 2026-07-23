@@ -16,7 +16,8 @@
     <link href="style.css" rel="stylesheet">
   
     
-  </head>
+      <link href="dist/css/mobile-fixes.css" rel="stylesheet">
+</head>
 
   <body>
     <h3 class="text-left" style="color:#fff;margin:20px; padding-bottom:10px">Duty Free Info</h3>    
@@ -171,6 +172,20 @@
     <script src="dist/js/jquery1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="dist/js/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
+
+    <!-- Cards flip on hover for a mouse/touchscreen, but hover doesn't
+         exist on a phone. Tapping toggles the same flipped state so the
+         same content (the answer on the back) is reachable on mobile. -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        var cards = document.querySelectorAll('.info-card');
+        for (var i = 0; i < cards.length; i++) {
+          cards[i].addEventListener('click', function () {
+            this.classList.toggle('is-flipped');
+          });
+        }
+      });
+    </script>
 
   </body>
 </html>
