@@ -42,6 +42,34 @@ img, video, iframe, embed, object, canvas, svg {
   /* Bootstrap navbar pages: bigger, easier-to-tap nav targets */
   .navbar-toggle { padding: 12px 10px; }
   .navbar-nav > li > a { padding-top: 14px; padding-bottom: 14px; }
+
+  /* THE key nav fix: the navbar is position:fixed with a hard-coded
+     50px body offset (navbar-fixed-top.css) that never adjusts when
+     the mobile menu opens. Bootstrap's default .navbar-collapse is a
+     full-width, in-flow block, so on this fixed navbar it just
+     overlaps the page content underneath instead of pushing it down.
+     Anchor it as a small corner dropdown under the hamburger icon
+     instead — matches how a mobile app menu is expected to behave. */
+  .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: auto;
+    width: 240px;
+    max-width: 80vw;
+    max-height: 75vh;
+    margin: 0;
+    padding: 8px 0;
+    background-color: #c80019;
+    border-top: none;
+    border-radius: 0 0 0 10px;
+    box-shadow: -2px 4px 16px rgba(0, 0, 0, .4);
+    overflow-y: auto;
+    z-index: 1040;
+  }
+  .navbar-nav {
+    margin: 0;
+  }
 }
 
 /* ---- Metro tile-launcher screens (index.html / main.html) ----
