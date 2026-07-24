@@ -1346,6 +1346,95 @@ a.anchor {
   .lightbox-next { right: 8px; }
 }
 
+/* ---------- Desktop-only device modal ---------- */
+.device-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 6, 8, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease;
+  padding: 24px;
+}
+
+.device-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.device-modal {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.device-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .15s ease, color .15s ease;
+}
+
+.device-modal-close:hover {
+  border-color: rgba(255, 51, 85, .5);
+  color: var(--red-bright);
+}
+
+.device-modal-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--red-bright), var(--amber));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.device-modal-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.device-modal-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--white);
+  margin: 0 0 12px;
+}
+
+.device-modal-text {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 0;
+}
+
 /* ---------- Closing CTA ---------- */
 .cta {
   position: relative;

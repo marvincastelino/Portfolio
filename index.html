@@ -301,6 +301,16 @@
                     <span class="lightbox-counter"></span>
                 </div>
 
+                <div class="device-modal-overlay" id="device-modal" aria-hidden="true">
+                    <div class="device-modal">
+                        <button type="button" class="device-modal-close" aria-label="Close">&times;</button>
+                        <div class="device-modal-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                        <h3 class="device-modal-title">Best on a bigger screen</h3>
+                        <p class="device-modal-text">This interactive training tool is built for desktop or laptop
+                            screens. Open this page on a larger device to try it out.</p>
+                    </div>
+                </div>
+
                 <a class="anchor" id="photo"></a>
                 <div class="wrapper">
                     <div class="section-head reveal">
@@ -975,6 +985,45 @@
                     if (e.key === 'Escape') closeLightbox();
                     if (e.key === 'ArrowLeft') show(idx - 1);
                     if (e.key === 'ArrowRight') show(idx + 1);
+                });
+            })();
+        </script>
+
+        <!-- desktop-only device gate: warn instead of navigating when a "Desktop View Only" app is opened on a small screen -->
+        <script type="text/javascript">
+            (function () {
+                var modal = document.getElementById('device-modal');
+                if (!modal) return;
+                var MOBILE_BREAKPOINT = 900;
+
+                function isSmallViewport() {
+                    return window.innerWidth <= MOBILE_BREAKPOINT;
+                }
+                function openModal() {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                }
+                function closeModal() {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                }
+
+                document.querySelectorAll('.app-card').forEach(function (card) {
+                    if (!card.querySelector('.app-card-badge')) return;
+                    card.querySelectorAll('a[href]').forEach(function (link) {
+                        link.addEventListener('click', function (e) {
+                            if (isSmallViewport()) {
+                                e.preventDefault();
+                                openModal();
+                            }
+                        });
+                    });
+                });
+
+                modal.querySelector('.device-modal-close').addEventListener('click', closeModal);
+                modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+                document.addEventListener('keydown', function (e) {
+                    if (modal.classList.contains('is-open') && e.key === 'Escape') closeModal();
                 });
             })();
         </script>
