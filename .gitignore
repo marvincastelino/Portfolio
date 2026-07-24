@@ -32,3 +32,6 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/osx
 *.md
+
+# Private, not for the public repo
+Marvin_STAR_Interview_Answers.docx
