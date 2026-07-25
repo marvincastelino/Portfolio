@@ -629,16 +629,83 @@ a:hover { color: var(--amber); }
 /* ---------- Featured Work (case study highlights, hero -> about) ---------- */
 .featured-work { padding-top: 36px; }
 
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.featured-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
 }
+
+.featured-top .section-head {
+  margin-bottom: 0;
+}
+
+.featured-nav {
+  display: flex;
+  gap: 10px;
+  flex: none;
+  padding-bottom: 6px;
+}
+
+.featured-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--white);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+.featured-nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.featured-nav-btn:hover {
+  background: linear-gradient(135deg, var(--red-bright), var(--amber));
+  border-color: transparent;
+  transform: scale(1.06);
+}
+
+.featured-nav-btn:disabled {
+  opacity: .35;
+  cursor: default;
+  transform: none;
+  background: var(--bg-elevated);
+  border-color: var(--border);
+}
+
+.featured-scroll-outer {
+  overflow: hidden;
+  margin: 0 -4px;
+}
+
+.featured-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  padding: 4px 4px 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.featured-scroll::-webkit-scrollbar { display: none; }
 
 .featured-card {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
   border-radius: 14px;
   overflow: hidden;
   background: var(--bg-elevated);
@@ -674,35 +741,6 @@ a:hover { color: var(--amber); }
 
 .featured-card:hover .featured-img-wrap img {
   transform: scale(1.04);
-}
-
-.featured-arrow {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(6, 6, 8, .72);
-  border: 1px solid rgba(255, 255, 255, .18);
-  color: var(--white);
-  backdrop-filter: blur(2px);
-  transition: background .2s ease, border-color .2s ease, transform .2s ease;
-}
-
-.featured-arrow svg {
-  width: 16px;
-  height: 16px;
-}
-
-.featured-card:hover .featured-arrow {
-  background: linear-gradient(135deg, var(--red-bright), var(--amber));
-  border-color: transparent;
-  transform: scale(1.1);
 }
 
 .featured-body {
@@ -759,8 +797,8 @@ a:hover { color: var(--amber); }
   transform: translateX(3px);
 }
 
-@media (max-width: 900px) {
-  .featured-grid { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .featured-card { flex-basis: 78vw; }
 }
 
 /* ---------- Bento nav grid ---------- */
