@@ -2319,59 +2319,6 @@ footer.site-footer .footer-built {
   .cs-block { padding: 22px 20px; }
 }
 
-/* ---------- Logo / employer strip (social proof, under hero) ---------- */
-.logo-strip {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  padding: 8px 0 34px;
-}
-
-.logo-strip-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dimmer);
-}
-
-.logo-strip-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  row-gap: 8px;
-}
-
-.logo-strip-item {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: var(--text-dim);
-  opacity: .85;
-  transition: color .2s ease, opacity .2s ease;
-}
-
-.logo-strip-item:hover {
-  color: var(--white);
-  opacity: 1;
-}
-
-.logo-strip-dot {
-  color: var(--border);
-  font-size: 18px;
-}
-
-@media (max-width: 600px) {
-  .logo-strip-item { font-size: 15px; }
-  .logo-strip-row { gap: 10px; }
-}
-
 /* ---------- Why Work With Me ---------- */
 .why-work { padding-top: 8px; }
 
