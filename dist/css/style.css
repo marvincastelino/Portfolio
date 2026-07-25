@@ -2319,6 +2319,165 @@ footer.site-footer .footer-built {
   .cs-block { padding: 22px 20px; }
 }
 
+/* ---------- Logo / employer strip (social proof, under hero) ---------- */
+.logo-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 8px 0 34px;
+}
+
+.logo-strip-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+}
+
+.logo-strip-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  row-gap: 8px;
+}
+
+.logo-strip-item {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--text-dim);
+  opacity: .85;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.logo-strip-item:hover {
+  color: var(--white);
+  opacity: 1;
+}
+
+.logo-strip-dot {
+  color: var(--border);
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .logo-strip-item { font-size: 15px; }
+  .logo-strip-row { gap: 10px; }
+}
+
+/* ---------- Why Work With Me ---------- */
+.why-work { padding-top: 8px; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 22px;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,51,85,.4);
+}
+
+.why-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--red-bright), var(--amber));
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.why-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.why-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+
+.why-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- FAQ ---------- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+}
+
+.faq-item {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.faq-q {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: .01em;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+
+.faq-a {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.faq-a a {
+  color: var(--red-bright);
+  text-decoration: none;
+}
+
+.faq-a a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .faq-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Back to top button ---------- */
 .back-to-top {
   position: fixed;
