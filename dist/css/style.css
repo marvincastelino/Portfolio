@@ -2068,6 +2068,21 @@ footer.site-footer .footer-built {
 
 /* ---------- Case Studies (reuses .tp-hero / .tp-layout / .tp-sidebar / .tp-panel shell) ---------- */
 
+.cs-pdf-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--red-bright);
+  margin: -14px 0 20px;
+  transition: transform .18s ease;
+}
+
+.cs-pdf-link:hover {
+  transform: translateX(3px);
+}
+
 .cs-badges {
   display: flex;
   flex-wrap: wrap;
@@ -2168,6 +2183,15 @@ footer.site-footer .footer-built {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.cs-subhead {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+  margin: 28px 0 10px;
 }
 
 .cs-shots {
