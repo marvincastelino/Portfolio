@@ -45,18 +45,27 @@ img, video, iframe, embed, object, canvas, svg {
 }
 
 /* ---- Metro tile-launcher screen (index.html) ----
-   Keep the exact desktop Start-Screen design and tile sizes on mobile,
-   rather than reflowing into a different-looking stacked grid. The
-   inline script now always sizes .tile-area to fit every tile-group at
-   full width (same calculation as desktop) instead of capping it to the
-   viewport. That full-size canvas just needs to be scrollable by touch
-   in both directions here, since desktop relies on a mouse-wheel-to-
-   horizontal-scroll converter that touch screens don't have. */
+   Keep the exact desktop Start-Screen design and tile proportions on
+   mobile, rather than reflowing into a different-looking stacked grid.
+   The inline script sizes .tile-area to fit every tile-group at full
+   width (same calculation as desktop) and then scales that whole canvas
+   down with a CSS transform so it fits the screen exactly — same layout,
+   just smaller, with nothing cropped and no scrolling required. */
 @media screen and (max-width: 900px) {
-  .tile-area {
-    overflow: auto !important;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x pan-y;
+  html, body { overflow: hidden !important; }
+  .tile-area { overflow: visible !important; }
+}
+
+/* ---- Bootstrap navbar pages (journey.html, videos.html, etc.) ----
+   .containernav is a flex row with justify-content:center, meant to
+   centre the desktop nav bar as a group. On mobile, once the hamburger
+   opens the collapsed menu, that same centering squashes the dropdown
+   into a floating centred block instead of a normal full-width list
+   under the brand. Drop the flex centering below the collapse
+   breakpoint so it stacks normally, toggle on the right as usual. */
+@media screen and (max-width: 767px) {
+  .containernav {
+    display: block !important;
   }
 }
 
