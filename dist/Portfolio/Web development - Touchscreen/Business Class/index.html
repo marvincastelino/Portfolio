@@ -77,17 +77,19 @@
                 plugin.init = function(){
                     setTilesAreaSize();
                     if (width > 640) addMouseWheel();
+                    fitTileAreaToViewport();
+                    $(window).on("resize orientationchange", fitTileAreaToViewport);
                 };
 
                 var setTilesAreaSize = function(){
+                    // Always size the tile-area to fit every group at full
+                    // width — same as desktop — rather than capping it to
+                    // the viewport on small screens. fitTileAreaToViewport()
+                    // below then scales that full-size canvas down to fit.
                     var groups = $(".tile-group");
                     var tileAreaWidth = 30;
                     $.each(groups, function(i, t){
-                        if (width <= 640) {
-                            tileAreaWidth = width;
-                        } else {
-                            tileAreaWidth += $(t).outerWidth() + 30;
-                        }
+                        tileAreaWidth += $(t).outerWidth() + 30;
                     });
                     $(".tile-area").css({
                         width: tileAreaWidth
@@ -101,6 +103,37 @@
                         page.scrollLeft(page.scrollLeft() - scroll_value);
                         return false;
                     });
+                };
+
+                // On phones/tablets, shrink the full desktop-sized tile
+                // canvas down (via CSS transform) so it fits the screen
+                // width with no cropping or horizontal scrolling needed —
+                // same design and proportions as desktop, just smaller.
+                var fitTileAreaToViewport = function () {
+                    var area = document.querySelector(".tile-area");
+                    if (!area) return;
+                    var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+                    if (w > 900) {
+                        area.style.transform = "";
+                        area.style.transformOrigin = "";
+                        document.body.style.height = "";
+                        return;
+                    }
+
+                    area.style.transform = "none";
+                    var naturalWidth = area.scrollWidth;
+                    var naturalHeight = area.scrollHeight;
+                    // Fit to the container's own inner width (after its
+                    // mobile padding), not the raw viewport, so the scaled
+                    // canvas doesn't overshoot the padded edge.
+                    var available = (area.parentElement && area.parentElement.clientWidth) || w;
+                    if (!naturalWidth) return;
+
+                    var scale = available / naturalWidth;
+                    area.style.transformOrigin = "top left";
+                    area.style.transform = "scale(" + scale + ")";
+                    document.body.style.height = Math.ceil(naturalHeight * scale) + "px";
                 };
 
                 plugin.init();

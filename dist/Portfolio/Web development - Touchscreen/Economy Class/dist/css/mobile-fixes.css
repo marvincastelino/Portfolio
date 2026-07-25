@@ -50,9 +50,12 @@ img, video, iframe, embed, object, canvas, svg {
    The inline script sizes .tile-area to fit every tile-group at full
    width (same calculation as desktop) and then scales that whole canvas
    down with a CSS transform so it fits the screen exactly — same layout,
-   just smaller, with nothing cropped and no scrolling required. */
+   just smaller, with nothing cropped and no scrolling required. Scoped
+   to the tile-launcher page only (body:has(.tile-group)) — an earlier
+   version of this rule applied to every page in the app and silently
+   killed scrolling on journey.html/videos.html too. */
 @media screen and (max-width: 900px) {
-  html, body { overflow: hidden !important; }
+  html:has(.tile-group), body:has(.tile-group) { overflow: hidden !important; }
   .tile-area { overflow: visible !important; }
 }
 

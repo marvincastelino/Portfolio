@@ -44,45 +44,30 @@ img, video, iframe, embed, object, canvas, svg {
   .navbar-nav > li > a { padding-top: 14px; padding-bottom: 14px; }
 }
 
-/* ---- Metro tile-launcher screens (index.html / main.html) ----
-   The original tile-group widths are fixed pixel values (160px to
-   1120px) sized for a large touchscreen. On a phone, force the
-   groups to stack full-width and let tiles wrap into a simple grid
-   instead of running off the edge of the screen. */
-@media screen and (max-width: 640px) {
-  html, body {
-    overflow-y: auto !important;
-    height: auto !important;
-  }
-  .tile-area {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 100vh;
-    overflow: visible !important;
-    padding-top: 70px !important;
-  }
-  .tile-group {
-    width: 100% !important;
-    min-width: 0 !important;
-    float: none !important;
-    margin-left: 0 !important;
-    padding: 0 12px !important;
-    box-sizing: border-box;
-  }
-  .tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .tile, .tile-small, .tile-sqaure {
-    width: 45% !important;
-    height: 130px !important;
-    margin: 2.5% !important;
-  }
-  .tile-wide, .tile-large, .tile-big, .tile-super {
-    width: 95% !important;
-    height: 150px !important;
-    margin: 2.5% !important;
+/* ---- Metro tile-launcher screen (index.html / main.html) ----
+   Keep the exact desktop Start-Screen design and tile proportions on
+   mobile, rather than reflowing into a different-looking stacked grid.
+   The inline script sizes .tile-area to fit every tile-group at full
+   width (same calculation as desktop) and then scales that whole canvas
+   down with a CSS transform so it fits the screen exactly — same layout,
+   just smaller, with nothing cropped and no scrolling required. Scoped
+   to the tile-launcher page only (body:has(.tile-area)), so it never
+   touches scrolling on this app's other pages. */
+@media screen and (max-width: 900px) {
+  html:has(.tile-group), body:has(.tile-group) { overflow: hidden !important; }
+  .tile-area { overflow: visible !important; }
+}
+
+/* ---- Bootstrap navbar pages (videos.html, catering.html, etc.) ----
+   .containernav is a flex row with justify-content:center, meant to
+   centre the desktop nav bar as a group. On mobile, once the hamburger
+   opens the collapsed menu, that same centering squashes the dropdown
+   into a floating centred block instead of a normal full-width list
+   under the brand. Drop the flex centering below the collapse
+   breakpoint so it stacks normally, toggle on the right as usual. */
+@media screen and (max-width: 767px) {
+  .containernav {
+    display: block !important;
   }
 }
 
