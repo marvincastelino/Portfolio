@@ -1310,6 +1310,26 @@
                 });
             });
         </script>
+
+        <!-- back to top -->
+        <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+            <span>Top</span>
+        </button>
+        <script type="text/javascript">
+            (function () {
+                var btn = document.getElementById('backToTop');
+                if (!btn) return;
+                function toggle() {
+                    btn.classList.toggle('is-visible', window.scrollY > 500);
+                }
+                window.addEventListener('scroll', toggle, { passive: true });
+                toggle();
+                btn.addEventListener('click', function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            })();
+        </script>
     </div>
 </body>
 
