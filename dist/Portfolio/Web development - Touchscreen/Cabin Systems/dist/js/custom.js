@@ -1,3 +1,24 @@
+function ytPlay(el) {
+  if (!el) return;
+  if (el.tagName === 'IFRAME') {
+    var base = el.getAttribute('data-base-src') || el.src.split('?')[0];
+    if (!el.getAttribute('data-base-src')) el.setAttribute('data-base-src', base);
+    el.src = base + '?rel=0&autoplay=1';
+  } else if (el.play) {
+    el.currentTime = 0;
+    el.play();
+  }
+}
+function ytPause(el) {
+  if (!el) return;
+  if (el.tagName === 'IFRAME') {
+    var base = el.getAttribute('data-base-src') || el.src.split('?')[0];
+    el.src = base + '?rel=0';
+  } else if (el.pause) {
+    el.pause();
+  }
+}
+
 var vid1 = document.getElementById("vid_frame1");
 var vid2 = document.getElementById("vid_frame2");
 var vid3 = document.getElementById("vid_frame3");
@@ -15,121 +36,93 @@ var vid14 = document.getElementById("vid_frame14");
 
 $(function() {   
 $('#a').on('shown.bs.tab', function playVid() {
-vid1.currentTime = 0;
-vid1.volume = 0.2;     
-vid1.play();
+ytPlay(vid1);
  })
 $('#a').on('hidden.bs.tab', function pauseVid() {         
-         vid1.pause();
+         ytPause(vid1);
 }) 
 
 $('#b').on('shown.bs.tab', function playVid() {
-vid2.currentTime = 0;
-vid2.volume = 0.2;     
-vid2.play();
+ytPlay(vid2);
  })
 $('#b').on('hidden.bs.tab', function pauseVid() {         
-         vid2.pause();
+         ytPause(vid2);
  })
 
 $('#c').on('shown.bs.tab', function playVid() {
-vid3.currentTime = 0;
-vid3.volume = 0.2;     
-vid3.play();
+ytPlay(vid3);
  })
 $('#c').on('hidden.bs.tab', function pauseVid() {         
-         vid3.pause();
+         ytPause(vid3);
 })
 $('#d').on('shown.bs.tab', function playVid() {
-vid4.currentTime = 0;
-vid4.volume = 0.2;     
-vid4.play();
+ytPlay(vid4);
  })
 $('#d').on('hidden.bs.tab', function pauseVid() {         
-         vid4.pause();
+         ytPause(vid4);
 })
 $('#e').on('shown.bs.tab', function playVid() {
-vid5.currentTime = 0;
-vid5.volume = 0.2;     
-vid5.play();
+ytPlay(vid5);
  })
 $('#e').on('hidden.bs.tab', function pauseVid() {         
-         vid5.pause();
+         ytPause(vid5);
 })
 $('#f').on('shown.bs.tab', function playVid() {
-vid6.currentTime = 0;
-vid6.volume = 0.2;     
-vid6.play();
+ytPlay(vid6);
  })
 $('#f').on('hidden.bs.tab', function pauseVid() {         
-         vid6.pause();
+         ytPause(vid6);
 })
 $('#g').on('shown.bs.tab', function playVid() {
-vid7.currentTime = 0;
-vid7.volume = 0.2;     
-vid7.play();
+ytPlay(vid7);
  })
 $('#g').on('hidden.bs.tab', function pauseVid() {         
-         vid7.pause();
+         ytPause(vid7);
 }) 
 
 $('#h').on('shown.bs.tab', function playVid() {
-vid8.currentTime = 0;
-vid8.volume = 0.2;     
-vid8.play();
+ytPlay(vid8);
  })
 $('#h').on('hidden.bs.tab', function pauseVid() {         
-         vid8.pause();
+         ytPause(vid8);
  })
 
 $('#i').on('shown.bs.tab', function playVid() {
-vid9.currentTime = 0;
-vid9.volume = 0.2;     
-vid9.play();
+ytPlay(vid9);
  })
 $('#i').on('hidden.bs.tab', function pauseVid() {         
-         vid9.pause();
+         ytPause(vid9);
 })
 $('#j').on('shown.bs.tab', function playVid() {
-vid10.currentTime = 0;
-vid10.volume = 0.2;     
-vid10.play();
+ytPlay(vid10);
  })
 $('#j').on('hidden.bs.tab', function pauseVid() {         
-         vid10.pause();
+         ytPause(vid10);
 })
 $('#k').on('shown.bs.tab', function playVid() {
-vid11.currentTime = 0;
-vid11.volume = 0.2;     
-vid11.play();
+ytPlay(vid11);
  })
 $('#k').on('hidden.bs.tab', function pauseVid() {         
-         vid11.pause();
+         ytPause(vid11);
 })
 $('#l').on('shown.bs.tab', function playVid() {
-vid12.currentTime = 0;
-vid12.volume = 0.2;     
-vid12.play();
+ytPlay(vid12);
  })
 $('#l').on('hidden.bs.tab', function pauseVid() {         
-         vid12.pause();
+         ytPause(vid12);
 })
 $('#m').on('shown.bs.tab', function playVid() {
-vid13.currentTime = 0;
-vid13.volume = 0.2;     
-vid13.play();
+ytPlay(vid13);
  })
 $('#m').on('hidden.bs.tab', function pauseVid() {         
-         vid13.pause();
+         ytPause(vid13);
 }) 
 
 $('#n').on('shown.bs.tab', function playVid() {
-vid14.currentTime = 0;
-vid14.volume = 0.2;     
-vid14.play();
+ytPlay(vid14);
  })
 $('#n').on('hidden.bs.tab', function pauseVid() {         
-         vid14.pause();
+         ytPause(vid14);
  })
 
 

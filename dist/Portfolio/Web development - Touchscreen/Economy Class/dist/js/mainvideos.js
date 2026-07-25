@@ -1,3 +1,24 @@
+function ytPlay(el) {
+  if (!el) return;
+  if (el.tagName === 'IFRAME') {
+    var base = el.getAttribute('data-base-src') || el.src.split('?')[0];
+    if (!el.getAttribute('data-base-src')) el.setAttribute('data-base-src', base);
+    el.src = base + '?rel=0&autoplay=1';
+  } else if (el.play) {
+    el.currentTime = 0;
+    el.play();
+  }
+}
+function ytPause(el) {
+  if (!el) return;
+  if (el.tagName === 'IFRAME') {
+    var base = el.getAttribute('data-base-src') || el.src.split('?')[0];
+    el.src = base + '?rel=0';
+  } else if (el.pause) {
+    el.pause();
+  }
+}
+
 var vid1 = document.getElementById("vid_frame1");
 var vid0 = document.getElementById("vid_frame0");
 var vid2 = document.getElementById("vid_frame2");
@@ -12,95 +33,75 @@ $(function() {
 // this bring to the top of the page - ice.html
 $('#collapseOne').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid1.currentTime = 0;
-vid1.volume = 0.2;     
-vid1.play();
+ytPlay(vid1);
  })
 $('#collapseOne').on('hide.bs.collapse', function pauseVid() {         
-         vid1.pause();
+         ytPause(vid1);
  }) 
 
 $('#collapseTwo').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid2.currentTime = 0;
-vid2.volume = 0.2;     
-vid2.play();
+ytPlay(vid2);
  })
 $('#collapseTwo').on('hide.bs.collapse', function pauseVid() {         
-         vid2.pause();
+         ytPause(vid2);
  })            
 // to control the video when collapse if show and hide
 $('#collapseThree').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid3.currentTime = 0; 
-vid3.volume = 0.3;    
-vid3.play();
+ytPlay(vid3);
  })
 $('#collapseThree').on('hide.bs.collapse', function pauseVid() {         
-         vid3.pause();
+         ytPause(vid3);
  })
 $('#collapseFour').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid4.currentTime = 0; 
-vid4.volume = 0.5;    
-vid4.play();
+ytPlay(vid4);
 })
 $('#collapseFour').on('hide.bs.collapse', function pauseVid() {         
-        vid4.pause();
+        ytPause(vid4);
 })
 $('#collapseFive').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid5.currentTime = 0; 
-vid5.volume = 0.5;    
-vid5.play();
+ytPlay(vid5);
 })
 $('#collapseFive').on('hide.bs.collapse', function pauseVid() {         
-        vid5.pause();
+        ytPause(vid5);
 })
 $('#collapseSix').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#collapseSix').offset().top }, 200); 
-vid6.currentTime = 0; 
-vid6.volume = 0.2;    
-vid6.play();
+ytPlay(vid6);
 })
 $('#collapseSix').on('hide.bs.collapse', function pauseVid() {         
-        vid6.pause();
+        ytPause(vid6);
 })
 $('#collapseSeven').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#collapseSeven').offset().top }, 200); 
-vid7.currentTime = 0; 
-vid7.volume = 0.2;    
-vid7.play();
+ytPlay(vid7);
 })
 $('#collapseSeven').on('hide.bs.collapse', function pauseVid() {         
-        vid7.pause();
+        ytPause(vid7);
 })
 $('#collapseEight').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#collapseEight').offset().top }, 200); 
-vid8.currentTime = 0; 
-vid8.volume = 0.2;    
-vid8.play();
+ytPlay(vid8);
 })
 $('#collapseEight').on('hide.bs.collapse', function pauseVid() {         
-        vid8.pause();
+        ytPause(vid8);
 })
 $('#collapseNine').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#collapseNine').offset().top }, 200); 
-vid9.currentTime = 0; 
-vid9.volume = 0.2;    
-vid9.play();
+ytPlay(vid9);
 })
 $('#collapseNine').on('hide.bs.collapse', function pauseVid() {         
-        vid9.pause();
+        ytPause(vid9);
 })
 $('#collapseZero').on('shown.bs.collapse', function playVid() {
 $("html, body").animate({ scrollTop: $('#accordion').offset().top }, 200); 
-vid0.currentTime = 0; 
-vid0.volume = 0.2;    
-vid0.play();
+ytPlay(vid0);
 })
 $('#collapseNine').on('hide.bs.collapse', function pauseVid() {         
-        vid0.pause();
+        ytPause(vid0);
 })
 
 
