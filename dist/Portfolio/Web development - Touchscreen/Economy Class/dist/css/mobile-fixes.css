@@ -44,45 +44,19 @@ img, video, iframe, embed, object, canvas, svg {
   .navbar-nav > li > a { padding-top: 14px; padding-bottom: 14px; }
 }
 
-/* ---- Metro tile-launcher screens (index.html / main.html) ----
-   The original tile-group widths are fixed pixel values (160px to
-   1120px) sized for a large touchscreen. On a phone, force the
-   groups to stack full-width and let tiles wrap into a simple grid
-   instead of running off the edge of the screen. */
-@media screen and (max-width: 640px) {
-  html, body {
-    overflow-y: auto !important;
-    height: auto !important;
-  }
+/* ---- Metro tile-launcher screen (index.html) ----
+   Keep the exact desktop Start-Screen design and tile sizes on mobile,
+   rather than reflowing into a different-looking stacked grid. The
+   inline script now always sizes .tile-area to fit every tile-group at
+   full width (same calculation as desktop) instead of capping it to the
+   viewport. That full-size canvas just needs to be scrollable by touch
+   in both directions here, since desktop relies on a mouse-wheel-to-
+   horizontal-scroll converter that touch screens don't have. */
+@media screen and (max-width: 900px) {
   .tile-area {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 100vh;
-    overflow: visible !important;
-    padding-top: 70px !important;
-  }
-  .tile-group {
-    width: 100% !important;
-    min-width: 0 !important;
-    float: none !important;
-    margin-left: 0 !important;
-    padding: 0 12px !important;
-    box-sizing: border-box;
-  }
-  .tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .tile, .tile-small, .tile-sqaure {
-    width: 45% !important;
-    height: 130px !important;
-    margin: 2.5% !important;
-  }
-  .tile-wide, .tile-large, .tile-big, .tile-super {
-    width: 95% !important;
-    height: 150px !important;
-    margin: 2.5% !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
   }
 }
 

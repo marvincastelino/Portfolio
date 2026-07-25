@@ -78,14 +78,14 @@
                 };
 
                 var setTilesAreaSize = function(){
+                    // Always size the tile-area to fit every group at full
+                    // width — same as desktop — rather than capping it to
+                    // the viewport on small screens. mobile-fixes.css makes
+                    // this full-size canvas scrollable by touch instead.
                     var groups = $(".tile-group");
                     var tileAreaWidth = 30;
                     $.each(groups, function(i, t){
-                        if (width <= 640) {
-                            tileAreaWidth = width;
-                        } else {
-                            tileAreaWidth += $(t).outerWidth() + 30;
-                        }
+                        tileAreaWidth += $(t).outerWidth() + 30;
                     });
                     $(".tile-area").css({
                         width: tileAreaWidth
