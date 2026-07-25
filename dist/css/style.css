@@ -676,6 +676,35 @@ a:hover { color: var(--amber); }
   transform: scale(1.04);
 }
 
+.featured-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(6, 6, 8, .72);
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: var(--white);
+  backdrop-filter: blur(2px);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.featured-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.featured-card:hover .featured-arrow {
+  background: linear-gradient(135deg, var(--red-bright), var(--amber));
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
 .featured-body {
   display: flex;
   flex-direction: column;
